@@ -8,7 +8,7 @@ import About from './pages/About';
 
 const Routes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="sexism-research">
       <Route component={Home} path='/' exact />
       <Route component={About} path='/about' exact />
       {/* <Route component={CreatePoint} path='/create-point' /> */}

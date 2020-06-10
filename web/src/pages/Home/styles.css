@@ -83,13 +83,12 @@
 }
 
 #page-home .content main .text {
-  /* border: 1px solid black; */
   flex: 1;
-  margin-left: 20px;
+  text-align: justify;
+  margin-right: 20px;
 }
 
 #page-home .content main .examples {
-  /* border: 1px solid black; */
   flex: 1;
   display: flex;
   flex-direction: column;
