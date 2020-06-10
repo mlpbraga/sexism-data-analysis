@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import About from './pages/About';
+import Main from './pages/Main';
 
 // import CreatePoint from './pages/CreatePoint';
 
@@ -11,6 +12,9 @@ const Routes = () => {
     <BrowserRouter basename="sexism-research">
       <Route component={Home} path='/' exact />
       <Route component={About} path='/about' exact />
+      {/* TODO: fazer private route */}
+      <Route component={Main} path='/main' exact />
+
       {/* <Route component={CreatePoint} path='/create-point' /> */}
     </BrowserRouter>
   );

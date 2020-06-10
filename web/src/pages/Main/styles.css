@@ -1,0 +1,144 @@
+#page-main {
+  height: 100vh;
+}
+
+#page-main .content {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#page-main .content header {
+  margin: 48px 0 0;
+}
+
+#page-main .content main {
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#page-main .content main h1 {
+  font-size: 54px;
+  color: var(--title-color);
+}
+
+#page-main .content main p {
+  font-size: 20px;
+  margin-top: 24px;
+  line-height: 38px;
+}
+
+#page-main .content main .vote {
+  text-align: center;
+}
+
+#page-main .content main .vote .vote-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#page-main .content main .button {
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  margin-top: 40px;
+}
+
+#page-main .content main .button span {
+  display: block;
+  background: rgba(0, 0, 0, 0.08);
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+
+#page-main .content main .button span svg {
+  color: #FFF;
+  width: 20px;
+  height: 20px;
+}
+
+#page-main .content main .button strong {
+  flex: 1;
+  text-align: center;
+  color: #FFF;
+}
+
+#page-main .content main .button:hover {
+  background: #DC70A3;
+}
+
+#page-main .content main .container {
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#page-main .content main .container p{
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}
+
+#page-main .content main .text {
+  flex: 1;
+  text-align: justify;
+  margin-right: 20px;
+}
+
+#page-main .content main .examples {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+@media(max-width: 900px) {
+  #page-main .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  #page-main .content header {
+    margin: 48px auto 0;
+  }
+
+  #page-main .content main {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #page-main .content main h1 {
+    font-size: 42px;
+  }
+
+  #page-main .content main p {
+    font-size: 24px;
+  }
+}
