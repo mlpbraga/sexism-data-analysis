@@ -24,7 +24,7 @@ const Home: React.FC = (props) => {
             <h1>Esses comentários são sexistas?</h1>
             <p>Estamos estudando formas de detectar automaticamente comentários sexistas em redes sociais, pretendemos fazer isso ensinando para um programa que tipo de comentário pode ser considerado sexista.</p>
             <p>Para fazer isso, precisamos que pessoas diversas nos digam quais dos comentários coletados por nós são sexistas e quais não são, e você pode nos ajudar rotulando alguns comentários aqui :)</p>
-            <p>Saiba mais sobre o projeto clicando aqui.</p>
+            <p>Saiba mais sobre o projeto clicando <Link to='/about'>aqui</Link></p>
           </div>
           <div className='examples'>
             <Comment />
