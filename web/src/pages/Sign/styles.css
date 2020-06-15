@@ -2,6 +2,11 @@
   height: 100vh;
 }
 
+#page-sign .content main {
+  display: flex;
+  flex-direction: row;
+}
+
 #page-sign .content {
   width: 100%;
   height: 100%;
@@ -19,8 +24,8 @@
 }
 
 #page-sign .content form {
-  margin: 80px auto;
   padding: 64px;
+  padding-top: 10px;
   max-width: 730px;
   background: #FFF;
   border-radius: 8px;
@@ -41,9 +46,12 @@
 }
 
 #page-sign form fieldset {
-  margin-top: 64px;
   min-inline-size: auto;
   border: 0;
+}
+
+#page-sign form fieldset legend{
+  margin: 20px 0;
 }
 
 #page-sign form .field-group {

@@ -29,7 +29,7 @@ const Home: React.FC = (props) => {
           <div className='examples'>
             <Comment />
             <Comment />
-            <Link className='link-button' to='/'>
+            <Link className='link-button' to='/sign'>
               <span>
                 <FiLogIn />
               </span>
