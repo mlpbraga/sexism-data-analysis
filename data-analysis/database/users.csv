@@ -1,0 +1,253 @@
+username,email,name,birth,gender,password,deleted
+mluisapbraga@gmail.com,mluisapbraga@gmail.com,Maria Luisa Pereira Braga,1997-10-10 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+jpaamoedo@gmail.com,jpaamoedo@gmail.com,João Pedro,2002-11-12 00:00:00+00:00,masc,$2a$10$fCtxz634WI0/dxfaITCZ7uG88rnyVkUm3BO0lL3fpmH0/dLpKz34.,False
+efnaka@gmail.com,efnaka@gmail.com,Eduardo Nakamura,1976-02-13 00:00:00+00:00,masc,$2a$10$JDA6u5SguGL5VcVY5DcFsuTtV9v.eYP6BIRSso2Es8d5s3mpzcfSG,False
+teste@teste.com,teste@teste.com,teste,2000-11-12 00:00:00+00:00,masc,$2a$10$/AVgQ0dz7QpwwZCuYGnPSuu9bwbf9IwrgNXpEq8Bq4947XB7Q5Bcy,False
+psm@icomp.ufam.edu.br,psm@icomp.ufam.edu.br,Phelipe ,1997-07-26 00:00:00+00:00,masc,$2a$10$VE9mgtZHkJcGoIQgcixTHuCDKESn2kHBJOnSzfacgJwNsOnIM6E7.,False
+leonerd12@gmail.com,leonerd12@gmail.com,Leonardo Augusto,1998-02-13 00:00:00+00:00,masc,$2a$10$sOqqsdEmEvHKhs1B6Jkj/OF1dZlipf.f/MPO7EXfMMrIzna5Lc9Ja,False
+dlzf@icomp.ufam.edu.br,dlzf@icomp.ufam.edu.br,Daniel Zordan,1997-04-12 00:00:00+00:00,masc,$2a$10$AVUfchymKguAzNlguXCIhO.r.tTOuWEusFXLRoFkIL6oYDjqoEPfe,False
+pp_carmo@hotmaio.com,pp_carmo@hotmaio.com,Pedro Paulo Justino do Carmo,1997-03-19 00:00:00+00:00,masc,$2a$10$79n8fLYFKK4qGAv9M6VJm.3vPhYY5inhvxJ/EXBiE9y7oGsKoGujq,False
+natsscatarino@gmail.com,natsscatarino@gmail.com,NATALIA CATARINO DE SOUSA,1996-08-30 00:00:00+00:00,fem,$2a$10$tUKpkcUTFzqUj3ROQxQ6BuOceEsCWD9PS9DU9qyVnZJ4oIGyoQPOW,False
+phcs@icomp.ufam.edu.br,phcs@icomp.ufam.edu.br,Pedro C.,1999-03-12 00:00:00+00:00,masc,$2a$10$bfRXDurMYbe54R/HvHndI..4YIi4qtZVVNQ8BuM9BwAbIKDWYjw2m,False
+estefane.sants@gmail.com,estefane.sants@gmail.com,estefane.sants@gmail.com,1998-03-07 00:00:00+00:00,fem,$2a$10$7YwHc6wwqPibkqYBpT/8KuiftrVN/KgStNYmM.8zZsPkeikhYGC4K,False
+hiltoncosta98@gmail.com,hiltoncosta98@gmail.com,hilton dos santos costa neto,1998-12-14 00:00:00+00:00,masc,$2a$10$KEnbg6KF6cxvl3WULCDne.2vv9mVWi20.1u1Ham6hTgvcxa0LRmSu,False
+cabralff@gmail.com,cabralff@gmail.com,Felipe Fonseca,1992-08-24 00:00:00+00:00,masc,$2a$10$215eFnlH8AcyuRu7DAwAfenugtSR93No.pdtewYMFHje48b5x8Tjm,False
+alice.aoliv@gmail.com,alice.aoliv@gmail.com,Alice,1999-10-22 00:00:00+00:00,fem,$2a$10$UnWogZBu2eGNSFly3k//Velb4jwXVMOnIV5QYxOwUy0Q4aF9D7Maa,False
+jqmj@icomp.ufam.edu.br,jqmj@icomp.ufam.edu.br,Junkes Jr,1998-09-01 00:00:00+00:00,masc,$2a$10$WaFAPMKASOI2MktmloQ/l.vBdYhtm5xvTj/t72kV5AS0i9iBWeKay,False
+bragadeoliveiraaa@gmail.com,bragadeoliveiraaa@gmail.com,CAROLINA BRAGA DE OLIVEIRA,2000-03-31 00:00:00+00:00,fem,$2a$10$/RTesINUxEiLKUN7v0XdrutqsnMnrvYsTDDHZ3McA6EXU4N97QJ52,False
+gabriel_lucena96@hotmail.com,gabriel_lucena96@hotmail.com,Gabriel lucena ,1996-03-20 00:00:00+00:00,masc,$2a$10$CsvRoBMduVcDYs7n8ZF9F.q4CE.JboVl3pi/g9Bcsi6claH.18uvm,False
+yanlucr@gmail.com,yanlucr@gmail.com,YAN LUCAS CAVALCANTE RODRIGUES,2001-12-04 00:00:00+00:00,masc,$2a$10$QTFP.Uz8zzehxAfBuNg2eeUfriALP0f3R2RwGAFfqqJOjBPZd20iS,False
+biancasd00@gmail.com,biancasd00@gmail.com,Bianca,2000-11-06 00:00:00+00:00,fem,$2a$10$HhhuNcDMKnQZCWsnel/R2e3yhwDNOWc7Nwhvzu4ogiBt6h4koNUem,False
+fabisouza.bezerra@gmail.com,fabisouza.bezerra@gmail.com,fabiana de souza bezerra,1997-05-13 00:00:00+00:00,fem,$2a$10$ak1xCUXwVx1xZTiMEOVdQuabAqzc3K8Z6YPMU0lpcy1gdUn/CaVJ2,False
+mcmelodecarvalho@gmail.com,mcmelodecarvalho@gmail.com,Maria Clara ,1997-04-05 00:00:00+00:00,fem,$2a$10$rmdFgqbcMLbB3RrxIGaVf.44whqWmKfRkQNb55AVCOsCJjj84KJ0O,False
+igorbfernandes2000@hotmail.com,igorbfernandes2000@hotmail.com,Igor,2000-11-20 00:00:00+00:00,masc,$2a$10$yaHwWwt/HtVVdR1M0d0W2ey31pgXBm3xVmiHdlq47lObadv3UudX2,False
+jvhipolito627@gmail.com,jvhipolito627@gmail.com,João Vitor ,2001-11-15 00:00:00+00:00,masc,$2a$10$5cpOJKR13m7lp26bZF/f/eXt.0oYRk/LJR5PQC.WlnH6uo3gF0Pfq,False
+lgpbentes@gmail.com,lgpbentes@gmail.com,Larissa Bentes,1997-09-03 00:00:00+00:00,fem,$2a$10$Lt2gRctAunWPaBnh65ZU3u0UZcKvq3T1XCdysRw3UEh1qY3W.rxJS,False
+faa2@icomp.ufam.edu.br,faa2@icomp.ufam.edu.br,miratort4,1999-04-13 00:00:00+00:00,fem,$2a$10$nTo14Iu5P2yKqyuJmewF2OMMwSyxhD1qW7frr4TpJ1bSJT5iuPTg.,False
+alexandrehsilva96@gmail.com,alexandrehsilva96@gmail.com,Luiz Alexandre,1996-07-21 00:00:00+00:00,masc,$2a$10$vEkfBIK7yhu0gpwHrt7aheGVjjIOaJX.5J4ByQdF9NKbr2V3X5I0u,False
+ils@icomp.ufam.edu.br,ils@icomp.ufam.edu.br,Ingrid Santos ,1996-07-03 00:00:00+00:00,fem,$2a$10$q/qe2J6r8Mt/5CWScKMrluwVqex.575Ntxe7CP/X73B.ush6W68HC,False
+vsg@icomp.ufam.edu.br,vsg@icomp.ufam.edu.br,Victória Guimarães ,1999-06-14 00:00:00+00:00,fem,$2a$10$Ti6UWyc/oM3cYONgn6K.BeNLSKbbTEyTMu57RSrsBLIPD9gsscUeC,False
+sammedeirosgeo@gmail.com,sammedeirosgeo@gmail.com,Samara,1994-11-03 00:00:00+00:00,fem,$2a$10$tc83kxUBy8TjpRMpsngdc.G6gkDhtRxmhl9cX/d3aPMLrhi1Nqq0S,False
+salviasouto@gmail.com,salviasouto@gmail.com,Sálvia de Albuquerque,1998-01-11 00:00:00+00:00,fem,$2a$10$DQcqLUVGDRBfZAfIgozdlOk1lOCx81q8MpyOWp72NfgA.SfU8EWke,False
+braranha63@gmail.com,braranha63@gmail.com,Barbara Aranha,1996-04-27 00:00:00+00:00,fem,$2a$10$.E7DpNg5ktPYYXMfDRqusul7MlcuHObNzKz9K12qZbs9bQuw5.Mti,False
+mauricioaraujomattos@gmail.com,mauricioaraujomattos@gmail.com,Maurício,1997-11-22 00:00:00+00:00,masc,$2a$10$KS2FqcAve82PY9xwxKBxzOmA9J9VQbdfA0dAcC7WqQHZxfRXO.kFq,False
+liraplease@gmail.com,liraplease@gmail.com,Laura Lira,2000-10-25 00:00:00+00:00,fem,$2a$10$.MMpG3IjKBDI8cEadK30gOzQaqQln78sVctFWtYhzUIpwOrulOqJO,False
+jfb@icomp.ufam.edu.br,jfb@icomp.ufam.edu.br,Jonas Ferreira Barros,1997-09-07 00:00:00+00:00,masc,$2a$10$ORLUT5GFI2n7YOVPI2bqAenGJZAI76DcknqDUUwdyiaB6EWKK44em,False
+andreane.manuela@gmail.com,andreane.manuela@gmail.com,Andreane Pereira Campelo,1990-05-17 00:00:00+00:00,fem,$2a$10$suAjAM4709GLfbPnXkNIKOTWmvgg7qgp7shDhSp64JHkztif.sD6i,False
+regininha1997@gmail.com,regininha1997@gmail.com,Márcia Regina,1997-02-22 00:00:00+00:00,fem,$2a$10$oH97qRJdwnQu3P1oKlDxYuAiq5s9IcMCB5nHVfekHJ7zvspCFul6q,False
+dbiancaac@hotmail.com,dbiancaac@hotmail.com,Deborah Correia,1997-10-14 00:00:00+00:00,fem,$2a$10$m6fy/6Hj.couklgZqpy9jusXiJ9usG3zw33R1qMUX7j9cs89o5ZA2,False
+celcifisio26@gmail.com,celcifisio26@gmail.com,Celciane,1998-02-26 00:00:00+00:00,fem,$2a$10$c1btdl/U19ozbbVZl/Q9zeK8CY9MY.5xh9KieYOQafdSLng7fzv4a,False
+joannecortez64@gmail.com,joannecortez64@gmail.com,Joanne,1995-12-23 00:00:00+00:00,fem,$2a$10$2TjdRG.adHlba3gT2W2aOeQznHeNofbjSe6YGUv2glVNHaIRWG5Ny,False
+caio.oct98@gmail.com,caio.oct98@gmail.com,Caio,1998-03-24 00:00:00+00:00,masc,$2a$10$O5J3QqgUeNE5qXnLpA2ulO8M55lM4MkXCbrzxLDh4DDWJEum5pGbq,False
+rls@icomp.ufam.edu.br,rls@icomp.ufam.edu.br,Renato Lousan da Silva,1997-03-13 00:00:00+00:00,masc,$2a$10$1REXn/CdwAM22KKCBnTYIucgq3OGEMyBqhQdkXpRfuoJkMMc1AHmi,False
+jocineiazevedo@hotmail.com,jocineiazevedo@hotmail.com,Joyce Azevedo da Silva,1999-01-26 00:00:00+00:00,fem,$2a$10$LkNgl5P4Y5Z3yVDnUgHzpuw8PwZhcBYGFt1WlX.dHNbAVybdEQKE.,False
+lass@icomp.ufam.edu.br,lass@icomp.ufam.edu.br,Luiz Alexandre,1996-07-21 00:00:00+00:00,masc,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+valeriasilva057@gmail.com,valeriasilva057@gmail.com,Valéria Bezerra da Silva,1997-03-08 00:00:00+00:00,fem,$2a$10$f8CT.fC1vRFPK32HyfvG5ux99Nf0SQuZX1OlHcuMf/.LQC/K6akPy,False
+teste,teste@email.com,teste teste,1997-11-11 02:30:39+00:00,fem,$2a$10$7bSp2L4fScBNugW8FtdiRulOzDpEgfIobtJMq5SefH.Pnlb3b4/y2,False
+mariaeduardamloht@hotmail.com,mariaeduardamloht@hotmail.com,Maria Meirelles,2000-11-21 00:00:00+00:00,fem,$2a$10$.Dzj0Yy6pz/4fmUpA.9ZH.xHc9PzG1.9WA.tHIqem6DkyBYagTkQq,False
+manoelf061@gmail.com,manoelf061@gmail.com,Manoel,2000-07-01 00:00:00+00:00,masc,$2a$10$t1VpI557VeHAxk7QeyAX1.UQPEX4EdskilQm9J.vsq.kew05ZESY6,False
+heloiselima.hl@gmail.com,heloiselima.hl@gmail.com,Heloise,1998-04-14 00:00:00+00:00,fem,$2a$10$HDa6z9HTpWei4VJ0wHCfKO5USvJJdqcu0r6J9sC4KMasj.PKJhs.C,False
+ramon_svale17@hotmail.com,ramon_svale17@hotmail.com,Ramon Souza do Vale ,1998-01-17 00:00:00+00:00,masc,$2a$10$qQD3wuM/CrcrEf.2Szo1keHREwqFtdErxHuilyXivEFALuYIBG3Ie,False
+lobo.ludymila@gmail.com,lobo.ludymila@gmail.com,Ludy,1993-03-15 00:00:00+00:00,fem,$2a$10$HkgFPoqNIUvvC9SIqq6ZJOQ08r44vF89FGv28l5KjiGzCUYp598ka,False
+andrimarciely@gmail.com,andrimarciely@gmail.com,Andrimarciely Silva de Souza,1983-01-01 00:00:00+00:00,fem,$2a$10$nU8QW1NKZx1PI4qWkHNeo.MrQBR1qkhFjBOukZ.ZNDqiffHGP3X0e,False
+gabrielsousa48042@gmail.com,gabrielsousa48042@gmail.com,Gabriel sousa ,1997-11-14 00:00:00+00:00,masc,$2a$10$BuzjzFHOx3GjA3ywILn6O.zeeoNSrqmmvzdRykQR2s9qsiKmFz62O,False
+joaquimnetto1999@gmail.com,joaquimnetto1999@gmail.com,Joaquim,1999-01-08 00:00:00+00:00,masc,$2a$10$ZXvCQJYYcLIFKtqSgw1xmOI8QQLJ9CbwR3r9IjAx96sOj4dKlO3IS,False
+ingracristinaom@gmail.com,ingracristinaom@gmail.com,Ingra,1999-01-18 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+jvgm97@gmail.com,jvgm97@gmail.com,Victor,1997-03-10 00:00:00+00:00,masc,$2a$10$TQdXqYXsaymRBHPUwMOme.e/f.YbcaDIY3rS2FDxqAnRw895FG.fG,False
+leandra03@icloud.com,leandra03@icloud.com,Leandra ,2001-10-03 00:00:00+00:00,fem,$2a$10$Qh1XCfm6mkfIoesmoiVZWOWm65OFEITtSHlm.0vBH55JzgM/V6FRa,False
+monocchy@hotmail.com,monocchy@hotmail.com,João ,1997-12-08 00:00:00+00:00,masc,$2a$10$IiEh8MnutCZAKOlx7ziCC.cUcYaIfnUpIgv5jdVgoRrZZMzz59iLm,False
+yv.sv45@gmail.com,yv.sv45@gmail.com,Victor,1997-12-01 00:00:00+00:00,masc,$2a$10$0TluMqGAMfTTJQE8myvWd.EGznYgZv.Kz0IXEGekV7NdXqbis1kXe,False
+tss@icomp.ufam.edu.br,tss@icomp.ufam.edu.br,Tiago,1998-11-13 00:00:00+00:00,masc,$2a$10$T4qfjC.nU1Jn3UVjyBQ4gOjslRn7AJn.6uZlGoM8HOrWCjiyhyYb.,False
+yasmim.kethelen@gmail.com,yasmim.kethelen@gmail.com,Yasmim,2003-06-19 00:00:00+00:00,fem,$2a$10$ctUWP7ru4hBPvzzSmDDeUeEga/eRE9TZdJlYNq71cnppdptHtkgFq,False
+rebecca.pontes@outlook.com,rebecca.pontes@outlook.com,Rebecca Amud,1987-03-08 00:00:00+00:00,fem,$2a$10$YUKT84PumYr0sFPWjpwLhOyhWOTTrWlfmCtG/NUF2ScWyy/xB9iW6,False
+isabelainesb@gmail.com,isabelainesb@gmail.com,Isabela,1995-02-03 00:00:00+00:00,fem,$2a$10$LWmB8AnzTIjcIAZwgabpNuRcTd7nTDIgZ62Mm8MTxU2Rccwql1qFS,False
+Lopeskathllen@gmail.com,Lopeskathllen@gmail.com,Kathllen de Souza Lopes ,1998-04-04 00:00:00+00:00,fem,$2a$10$Kyjf0CeiLcsYH2KzxxgYnedV1hy53slM8mFCwEnP6sm1RJR5vOqAa,False
+artbinda@gmail.com,artbinda@gmail.com,Arthur Bindalvis,1998-01-07 00:00:00+00:00,masc,$2a$10$b3Uzzo.a5W4BOgAlNuyqmeErE7zaaI1aAhSdMtCzddc/g3jK9UYg6,False
+erick.rsilva@hotmail.com,erick.rsilva@hotmail.com,Erick Ramos,1998-01-30 00:00:00+00:00,masc,$2a$10$E.fk4o3heMy/tWoBHcN0..WdAbX8JB90YfZhRH.y5CJrDrjYr7ica,False
+patriciabento@gmail.com,patriciabento@gmail.com,Patricia Silva Bento,1983-04-25 00:00:00+00:00,fem,$2a$10$7BiCSTCaHsH15XzVy7VOa.1wjpHlIBAPTunANyhmY4RQc6g11AlGq,False
+shipp-chan@hotmail.com,shipp-chan@hotmail.com,Shipp,1984-09-27 00:00:00+00:00,fem,$2a$10$4Q6hq4aGHZAO5UeRtieD.eg6hviIP8nAUPlnTAo5m6JSiRt8uVrsK,False
+isabelpeixotto@gmail.com,isabelpeixotto@gmail.com,Isabel Peixoto ,1998-07-02 00:00:00+00:00,fem,$2a$10$dBQhfONujzLimPfyMeCdjuhGJ.YQ.KHJ6mNkrcgCUjIl/JDsfOrUC,False
+pat.arc.cas@gmail.com,pat.arc.cas@gmail.com,Patrícia,1984-03-09 00:00:00+00:00,fem,$2a$10$jA9tA.bEA9JCjpzf.VXf1etEgI7CkgPZ4CdmI97ixAj4PBpBw2PmG,False
+aos@icomp.ufam.edu.br,aos@icomp.ufam.edu.br,Andrey Souza,1998-11-30 00:00:00+00:00,masc,$2a$10$FIXfhTKeJX/vzR3WeLKQoe0X..stqlWiElx0enelGgWH7GZ9N56lm,False
+nathaliapenalber@gmail.com,nathaliapenalber@gmail.com,Nathalia ,1996-06-11 00:00:00+00:00,fem,$2a$10$EP7LXYT5eIbQn7z.aA0Lzu4s9eCe1Qz9RPtxcfoVHe9AJUVhzOitm,False
+mclaragonzalez.27@gmail.com,mclaragonzalez.27@gmail.com,Maria Clara Gonzalez ,2000-05-27 00:00:00+00:00,fem,$2a$10$Z25UjLEMY7rOY1xMliGrYeNKf0LDhmVQy04cjVZfGGmQg28gAYMma,False
+dennyson.matos1632@gmail.com,dennyson.matos1632@gmail.com,Dennyson Barros,1997-09-13 00:00:00+00:00,masc,$2a$10$Usx7ZRV2AhAHrI/DJQ7xbOFgQtOtjhWpt5OeG0KUN4FTYakyLgdLS,False
+cdayane.berredo@gmail.com,cdayane.berredo@gmail.com,Carla,2000-11-18 00:00:00+00:00,fem,$2a$10$GGHnaXRuZrMnY18w3dP6.OrZYlVhMaMN1i45xseAYei.nh.CbinOm,False
+thugo.y@hotmail.com,thugo.y@hotmail.com,Thugo Yago,1994-01-02 00:00:00+00:00,masc,$2a$10$ZsYqiCs3PYF5OHnNRg./EeLen/idJQ.DNdAcoJzmTRlsXj.6PS8j6,False
+ianflexa@gmail.com,ianflexa@gmail.com,Ian flexa,1995-12-15 00:00:00+00:00,masc,$2a$10$EFNOiDj8oY/89rKnKef28upuagfbfF4NbcZ.zQ1lXfEYe4bPHVNkO,False
+tanizia23@gmail.com,tanizia23@gmail.com,Tanizia De lira fagundes,1995-05-07 00:00:00+00:00,fem,$2a$10$UbaM0tZdhJxcoKoVY/fSlOzh9rFWpK2lBflYmnFRNWn5gCnoVRJrO,False
+tbm@icomp.ufam.edu.br,tbm@icomp.ufam.edu.br,Thiago Braga de Melo,1993-12-22 00:00:00+00:00,masc,$2a$10$rQ5c4kojTcRQ1eqvT0itsebKqip4SjeR10eyNQo6DETJOAfm5MczG,False
+adriellymoraes88@gmail.com,adriellymoraes88@gmail.com,Adrielly,2001-09-25 00:00:00+00:00,fem,$2a$10$a/jtT8b6ukzCo8xvTyd43.eTjfIHjnCB6X7iDSV3MUb0IImjt1ocW,False
+jsm@icomp.ufam.edu.br,jsm@icomp.ufam.edu.br,Jhonathan Miranda,1997-11-15 00:00:00+00:00,masc,$2a$10$tm/EexTZgSkBOi2U4.GFSOaFN4LE2uChuLP7ZW8Buz1mnw6y2wnaW,False
+tmas@icomp.ufam.edu.br,tmas@icomp.ufam.edu.br,tmas@icomp.ufam.edu.br,1994-10-04 00:00:00+00:00,fem,$2a$10$FvAgrEy.JNE.3IWEPvmcQ.3.S5l/7AvYGjW.uCAesZ8AcxC2I.CI6,False
+lulobaum@gmail.com,lulobaum@gmail.com,Luana Lobão,1989-10-13 00:00:00+00:00,fem,$2a$10$cBJqzuXPmiDO6cXObFvxMeVUnsWbiLI8Pj67tj5Iooa6sBzFGAZPC,False
+katiely.eu@gmail.com,katiely.eu@gmail.com,Katiely dos Santos Oliveira Moreira,1998-02-03 00:00:00+00:00,fem,$2a$10$QPZyGt86u5k..DkpxlWdE.p6ur9IKbePCXkd1MadjvtfdzR9ACpdG,False
+abj@icomp.ufam.edu.br,abj@icomp.ufam.edu.br,Agnaldo,1999-03-17 00:00:00+00:00,masc,$2a$10$mWL4JR0aNnT/xSAQFF0DsOeyDPU.8ZUFKven.XWLRZ.J4qI9DWvQm,False
+ebony_brandao@hotmail.com,ebony_brandao@hotmail.com,Ebony,1994-07-16 00:00:00+00:00,masc,$2a$10$tBSuLGYCejQKqk4zDK8XeOnNnChkRkj8DE10S1UK05uoSI.biKfEK,False
+pereiratls@gmail.com,pereiratls@gmail.com,Alex Silva,1982-12-09 00:00:00+00:00,masc,$2a$10$2Ew8Uv06XWgBvj3vqMgVOO58Xfvqp73XV8tzAStnHMZTNUPRTLyqi,False
+lmnt@icomp.ufam.edu.br,lmnt@icomp.ufam.edu.br,Lígia ,1993-10-03 00:00:00+00:00,fem,$2a$10$fJT4/x3Ns5eUQ8yxovlRVe9BF9v6LIAaL6Nfblv.eWpxZCJaHazEa,False
+rodrigodeacarvalho@gmail.com,rodrigodeacarvalho@gmail.com,Rodrigo,2001-02-04 00:00:00+00:00,masc,$2a$10$Kri3xS.wJ8LSKhrh9EkWWOrsCF3rn2MhNfcT1QzV63C8/C4QkZzyS,False
+anavitoria.vitoriano@gmail.com,anavitoria.vitoriano@gmail.com,Ana Vitória Vitoriano,1997-09-03 00:00:00+00:00,fem,$2a$10$dF46kBODvjdA9gSKgbzC2OY6TL2wE8bBxK3A5YANvs7aykGihfwi.,False
+daniele.simas.25@gmail.com,daniele.simas.25@gmail.com,Daniele Simas Guimarães,2001-09-25 00:00:00+00:00,fem,$2a$10$8dUqd1zzhuuCLYl.PEYSE.Lo7uJ.kkH5CQ8KdMYvD3/VSR81/.Nxa,False
+gabi.gfl96@gmail.com,gabi.gfl96@gmail.com,gabriela,1996-08-03 00:00:00+00:00,fem,$2a$10$lMuNrVYiVvZ5yzdojkcWwuo5.XaYrRfHUuXBBylGNPfurBpaP76hG,False
+adv.tatianebraga@gmail.com,adv.tatianebraga@gmail.com,Tatiane Braga,1977-09-01 00:00:00+00:00,fem,$2a$10$LKDrcBLBpvXcqk5RkObtIuwl7Z9VOotVn6DZAB8Ws7hsqkvWF.JGy,False
+ehsa2210@gmail.com,ehsa2210@gmail.com,Enzo Henrique,1998-10-22 00:00:00+00:00,masc,$2a$10$sqw5iVrgFh01BrfAf1D4jOumlo6v08Wa11BvMJEucBfI0O3oZxt2m,False
+leonardoqueiroznunes@gmail.com,leonardoqueiroznunes@gmail.com,Leonardo Queiroz,1998-06-27 00:00:00+00:00,masc,$2a$10$1ywaynb2IO8Qv7IFxKMcIurqGqu3RlFir4MulPMnJ8EqItvpcO.n2,False
+nandp.lopes@gmail.com,nandp.lopes@gmail.com,Fernanda Pinto Lopes ,2000-02-28 00:00:00+00:00,fem,$2a$10$lycESeLUG3zkFiwfK7fAEuDSkjlzBV.BoJ.1Zvj3iJCVuZ9A1qjrC,False
+natalia.oliveirac1@gmail.com,natalia.oliveirac1@gmail.com,Natalia,1997-12-26 00:00:00+00:00,fem,$2a$10$WvgKiADoVSuOcro6vVvfA.TLQyd9BR6s6aKWCaNkG8lVRLzXri7lC,False
+CARLOSHENRIQUEEVER@GMAIL.COM,CARLOSHENRIQUEEVER@GMAIL.COM,Carlos,1998-09-06 00:00:00+00:00,masc,$2a$10$vxpLYOnrbRLVvAQuHyDhZ.KNZu7p85BQoQ0OYrq1B.EB8k1HCS8Je,False
+kenylucas91@gmail.com,kenylucas91@gmail.com,Keny Lucas Souza,1998-06-15 00:00:00+00:00,masc,$2a$10$DakcAkGVwNO0wR8yKWlBvOIPGwXJnlEGwzfjQVCQJevCcFBPPAYzm,False
+barretosteph@gmail.com,barretosteph@gmail.com,Stephanny,1996-10-03 00:00:00+00:00,fem,$2a$10$f3SdTPeuwDtcEZrW1qb.du7JbpT2EWohRguM30zxYAitjG7z46vZS,False
+fgdl@icomp.ufam.edu.br,fgdl@icomp.ufam.edu.br,fabi,2000-02-20 00:00:00+00:00,fem,$2a$10$bVxk/LZdWEbfGZMSeChDyuBczSFQe/qkgQ4fQTWskWLWWG4MY1ARe,False
+edileudopereira@gmail.com,edileudopereira@gmail.com,Edileudo Abreu Pereira,1976-02-01 00:00:00+00:00,masc,$2a$10$mbiMhbprndnLlM7VzXCFceTMmBsoXd7286yQ3NyovW/iWFrXuWfVG,False
+salc@icomp.ufam.edu.br,salc@icomp.ufam.edu.br,Thyago Santos Lucas,1995-10-08 00:00:00+00:00,masc,$2a$10$Z6E92Dvyqw80Kiy/XI9./.xGBmYugu31pIEu0DSYZRtaJDg30Itsq,False
+psva9806@gmail.com,psva9806@gmail.com,Renata,1998-06-06 00:00:00+00:00,fem,$2a$10$y/sbOvami2HJIQTSRxXBVOCwewLuw9ldr3jNoW2Luji0WjuwYi2r6,False
+robgomesc@gmail.com,robgomesc@gmail.com,Roberta Gomes,1998-08-16 00:00:00+00:00,fem,$2a$10$.4Juzp5YYkOZiT4H2Ruxqea.eFWYYd064GZpelRC8xNGmnOP64iR.,False
+gsm.odo19@uea.edu.br,gsm.odo19@uea.edu.br,Gabriella Souza Medeiros,2001-04-27 00:00:00+00:00,fem,$2a$10$426Hc0PokvQLK5vq6lIRFuQteN3ZOhiN04HvfC2DT7Jzh5sR6cIou,False
+njordana1998@gmail.com,njordana1998@gmail.com,Nayra Jordana ,1998-08-24 00:00:00+00:00,fem,$2a$10$GnqSHngQx/DgMjDN2nkb9uQWuji7UmPim6WCYBetTj87.aYZ5hHFG,False
+thaiiisfranca@gmail.com,thaiiisfranca@gmail.com,Thais,1994-04-08 00:00:00+00:00,fem,$2a$10$AZBvChxiHCmphX1UlqqC6uurE8DWJx9N/gx/1bUqaHepRplTWthvO,False
+rayrahdlp@gmail.com,rayrahdlp@gmail.com,Rayrah de Lima Pereira,2002-04-12 00:00:00+00:00,fem,$2a$10$hX29lvgKM8N9Whuz6XZeuO6qlXCp8mSV5jPMYWyXR7X0lIVIhlwWm,False
+thaynamaria_rs@hotmail.com,thaynamaria_rs@hotmail.com,Thayná Maria,1999-08-29 00:00:00+00:00,fem,$2a$10$gexS8o8.prk1e1Mw0hvdu.Zhc072icOYdTZqBQw0pBOyLj7MX25E.,False
+annacaroline1504@gmail.com,annacaroline1504@gmail.com,Anna Andrade,1997-04-15 00:00:00+00:00,fem,$2a$10$asU7JaMVW2SrhmpXA4zxseTHzI3sqqD1LJO06iBTYSaN/p3k/hJEe,False
+yasminfariasr@gmail.com,yasminfariasr@gmail.com,Yasmin ,2000-03-18 00:00:00+00:00,fem,$2a$10$SO78HIcImEkzYNX3qnHp/eJmGIxFY9TZP6dYWLnpYHc.plS1exANW,False
+rodrigo.angelim.ra@gmail.com,rodrigo.angelim.ra@gmail.com,Rodrigo Angelim ,1998-05-31 00:00:00+00:00,masc,$2a$10$kGe7y40SiQGFNGPN5F4Kzut3wnOkMqoFfI0pLevEYgkc1Msu1/gHC,False
+carlos.fasj@gmail.com,carlos.fasj@gmail.com,Carlos Junior,1999-12-26 00:00:00+00:00,masc,$2a$10$KeYADq2VCkCHOz.MzNyJf.Z24.qlyVnoaQIsLIcEVjMOrxgdeeVou,False
+victorhauache@gmail.com,victorhauache@gmail.com,VICTOR THURY VIEIRA HAUACHE,1998-11-15 00:00:00+00:00,masc,$2a$10$Tk/vNOZ/4asejK0OSmRpIOssi7s09jjiC1Sct4zcrcf3W72Jxwr3S,False
+gas@icomp.ufam.edu.br,gas@icomp.ufam.edu.br,Gabriel Saraiva,1999-05-22 00:00:00+00:00,masc,$2a$10$SL1btFQ1BYF7Q06xf4VfWOkdqvDuquvEoeiI1okvdTzLEsF1ZiLZG,False
+pangiole@gmail.com,pangiole@gmail.com,paola,1989-12-01 00:00:00+00:00,fem,$2a$10$7qcoZkScAXZNzGeHrB0NA.3mCMXliIPL2bnEysoA6E.UOCSLdzIru,False
+jessicabmoura00@gmail.com,jessicabmoura00@gmail.com,Jessica Brito,2000-08-29 00:00:00+00:00,fem,$2a$10$Z5lGU6QRsAtXNyxpKbSBcO2p1WQGy0JfuEr2MzXiUYlGag5pIY.N.,False
+asfa@icomp.ufam.edu.br,asfa@icomp.ufam.edu.br,Ada ,1999-07-07 00:00:00+00:00,fem,$2a$10$inKYZ9eusgeKhWY8ccDKDOGtpKv/etw/SMt8.mlFYTppllbed3yNS,False
+nicolebarauna12@gmail.com,nicolebarauna12@gmail.com,Nicole Baraúna,1998-02-08 00:00:00+00:00,fem,$2a$10$5Syy3tkSZUQ3QwzK4CYK5eN2hn/QynbKIlEWrC4PEdtHim0LdpZmG,False
+keila_regina07@hotmail.com,keila_regina07@hotmail.com,Keila Pascarelli,1996-03-01 00:00:00+00:00,fem,$2a$10$88qHlPcBmcM6IzFdZXogjOyrV9CpGV2kRyF7gOVl/uZ.nfXa5UrNG,False
+anacnpsi@gmail.com,anacnpsi@gmail.com,Ana Carolina ,1998-12-13 00:00:00+00:00,fem,$2a$10$4N8mbKbjrGNJCr7VnRVQLeICu77NncTFuzH8SlCgScN8cDJp5rwsS,False
+alexcosta325@gmail.com,alexcosta325@gmail.com,Alex,1997-09-28 00:00:00+00:00,masc,$2a$10$1a8zPd/cjCaPOJUQJs/ZEugoJRpGkflGlDzEYq1HS5l9/hTVg4a5u,False
+lailasoutelo.ls@gmail.com,lailasoutelo.ls@gmail.com,Laila,1998-06-13 00:00:00+00:00,fem,$2a$10$bz2W4mY.oSA4Wudb2GIdler6ykVDEg0Ud6QCq5p0RNpd3SdhUJM6q,False
+inaselmafeitosa@hotmail.com,inaselmafeitosa@hotmail.com,Iná Feitosa,2001-10-10 00:00:00+00:00,fem,$2a$10$yR1pTpcuUcY6jlWH/rxG0O9RnFoVuHCL6fayDf3ZgEFI7CFffer8u,False
+sidneymendonca2527@gmail.com,sidneymendonca2527@gmail.com,Sidney Mendonça,2000-07-09 00:00:00+00:00,masc,$2a$10$XyWfEj/s4CuaiMbGftePae7AiJGHYN9GAWamjAznAuK6lNuEb6DUm,False
+thalitasoliveira04@gmail.com,thalitasoliveira04@gmail.com,thalita,1997-05-04 00:00:00+00:00,fem,$2a$10$DV46gRRY/hjwjYfntu80Oe3P2UtHVXL6sEVrNWLuou5KrRXa3Pk0O,False
+vanamoraes@gmail.com,vanamoraes@gmail.com,Vanessa moraes,1975-11-22 00:00:00+00:00,fem,$2a$10$2ktViBRVc04NGzYFVgsVfOnCn/gILbgMhXivop5cXQr28HxmFmbAq,False
+innecunha@gmail.com,innecunha@gmail.com,Innê Cunha,1998-06-30 00:00:00+00:00,fem,$2a$10$78PUx.7S/zkeO8lRqAOFGO.OSoHHCU65H8gRUSqfxK3nl2bdM1DXm,False
+hrodriguesdacostaii@gmail.com,hrodriguesdacostaii@gmail.com,Hélio Rodrigues ,1998-04-21 00:00:00+00:00,masc,$2a$10$bfzQJmGM0blZj.fKgIrsYOkNF1TV9XrgRLxor42GkFpc3DHZnKSI2,False
+louisepascarelli@hormail.com,louisepascarelli@hormail.com,Louise Pascarelli,1995-10-11 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+mirellarebecafc@gmail.com,mirellarebecafc@gmail.com,Mirella Rebeca,1991-09-13 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+anaclaracabr@gmail.com,anaclaracabr@gmail.com,Ana Clara,1997-08-03 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+calixtovitoria22@hotmail.com,calixtovitoria22@hotmail.com,Vitória Calixto,1998-03-11 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+taynahcp@gmail.com,taynahcp@gmail.com,Taynah Lima,1996-03-29 00:00:00+00:00,fem,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+isabelevilac@gmail.com,isabelevilac@gmail.com,isabele vilaça,2000-05-11 00:00:00+00:00,fem,$2a$10$2Cv.3E0V46erv2zKpl9E4Ot8FoLjoLSKVb/UtdkXlH0sjSSMKteMq,False
+mardson.18rocha@gmail.com,mardson.18rocha@gmail.com,Mardson,1997-05-23 00:00:00+00:00,masc,$2a$10$2BW2aimrhzjSA4r/Q9SSE.2nxnpbNDmT53YELk/acoz0iQ1B6DeoC,False
+vitoriatavares9279@gmail.com,vitoriatavares9279@gmail.com,Vitoria Cordovil,2001-05-22 00:00:00+00:00,fem,$2a$10$W.VAshx/vmCs.56keUuwf./lEodbgJcOU6CRQgsJqIfNYFP./QHA6,False
+lbraga@fpf.br,lbraga@fpf.br,Luis Braga,1975-06-22 00:00:00+00:00,masc,$2a$10$IUH8F4jMvIP4VSBHA3ZZxOqw1aaeC99N9QujWLYv9SyQbusvS104W,False
+josephlevinthal@yahoo.com.br,josephlevinthal@yahoo.com.br,Joseph Levinthal,1996-12-25 00:00:00+00:00,masc,$2a$10$p/cnDNZFxI1jZip7esDE1.MO69bKnfY45ae1eCut.LcOxW2svZ8CG,False
+ldfj13@gmail.com,ldfj13@gmail.com,Lenilson Junior,1999-09-02 00:00:00+00:00,masc,$2a$10$SbVTN0I1P85m4RDtnb2dpeY0942CqiXsls3luH8CNKIhZWJ.Shjpu,False
+qpaulabianca@gmail.com,qpaulabianca@gmail.com,Paula Bianca,2001-09-15 00:00:00+00:00,fem,$2a$10$vv8.3b1M71MFke7.xWbDteqnzSLJujxs2Vgb7T.5qJNXwPXeVA62W,False
+vandsav@hotmail.com,vandsav@hotmail.com,Vanderley Santos Vieira Nichols,1975-02-23 00:00:00+00:00,masc,$2a$10$2evyew8qqh/2/gd/VM72xOnrEDrUEaAlNu1QGov0elmhACOOKkVPy,False
+ramonrorigues55@gmail.com,ramonrorigues55@gmail.com,Ramon Rodrigues,1999-07-19 00:00:00+00:00,masc,$2a$10$ytlCX7oVyvDY7irI9ApmWOh4IFNvkcpWY36ARDrGrUNbeSLzw1c2y,False
+arlen.nascimento@gmail.com,arlen.nascimento@gmail.com,Arlen,1984-10-04 00:00:00+00:00,masc,$2a$10$aW2XLHzk1igkdoWgM19/qeDqrksUkH2xudTwktbyRVgoAr0LE9Me.,False
+robert-soad@hotmail.com,robert-soad@hotmail.com,Roberto Cidade Fonseca,1992-04-11 00:00:00+00:00,masc,$2a$10$.ZesLCvsGYmAqLg/HRHgwuuK8yJGsCtcKHIhZ9CM/F32tIZl7KBau,False
+matheusoliveira50231@gmail.com,matheusoliveira50231@gmail.com,Matheus Oliveira ,2000-03-11 00:00:00+00:00,masc,$2a$10$/A83WC6Jx7zsQ52S87UONO2LmN13DiU8fVYFFmcJqtnEwpBQzMPiO,False
+fgnaka@gmail.com,fgnaka@gmail.com,Fabiola Nakamura,1974-12-09 00:00:00+00:00,fem,$2a$10$grkO9UhwZ6OVxFQ28TYLLOmiFCJb6ogfu2tuTVgQhCev4NOB6UUgO,False
+fsm2@icomp.ufam.edu.br,fsm2@icomp.ufam.edu.br,Felipe Sonntag Manzoni,1996-07-03 00:00:00+00:00,masc,$2a$10$JJgPaUj29fgcwUBaJtUaCOHDv51OCq6NTebIx3D4ajqnBT0mNCJgC,False
+luanasousa_silva_@hotmail.com,luanasousa_silva_@hotmail.com,Luana,1996-03-25 00:00:00+00:00,fem,$2a$10$ow7tfzbdvR9ZYA78VOpz6.9J3zLsr8EPKNQDoqH/goujzY0q6cqxy,False
+milhomemfranca@outlook.com,milhomemfranca@outlook.com,Thais França ,1994-04-08 00:00:00+00:00,masc,$2a$10$47.ojKeFLocAMb218gYZ/eAxuVjjlOG8CBS2kdtOdb/jpYs4A0Gyq,False
+nataliabraga1996@gmail.com,nataliabraga1996@gmail.com,Natalia,2006-01-10 00:00:00+00:00,fem,$2a$10$M5FI.AdM9bwvpVQK7hdrzehwatDjYvIWAALpwyZwoi3.FTl6dDo2y,False
+leandrotassio@hotmail.com,leandrotassio@hotmail.com,leandro tassio,1996-06-05 00:00:00+00:00,masc,$2a$10$l2pfW9uZLlmG1IE9SRWe.OE9l97gphSgIF5udIlgJVo5mawHGoZIu,False
+leticialabanca56@hotmail.com,leticialabanca56@hotmail.com,Letícia Labanca,1999-09-06 00:00:00+00:00,fem,$2a$10$k2aVooBYQTHVtHkIV14gE.C9Vl56czy63EMKnGkNrTu41bJdB15Xy,False
+lgavinho@fpf.br,lgavinho@fpf.br,Gavinho,1978-01-01 00:00:00+00:00,masc,$2a$10$ajbKqDdrMnbSfJahrpPX7uj3/vhWkVq7ETOKnCvSh9X2H0XEeKlAG,False
+roberto.sousa@fpf.br,roberto.sousa@fpf.br,Roberto barbosa,1989-05-09 00:00:00+00:00,masc,$2a$10$s/wbYW8EQ735Dn58ShMLde79U2ezFnAUvvrDaCl6qXOuuXEWKAdnO,False
+yamada.gilson@gmail.com,yamada.gilson@gmail.com,GILSON AKIO YAMADA,1982-08-21 00:00:00+00:00,masc,$2a$10$gLyK2JWALrOtFA.QiAPtquNaG6YebBTX0yR16oUqZBO4R4FdG.59S,False
+rafael.lima@fpf.br,rafael.lima@fpf.br,Rafael Lima,1990-07-20 00:00:00+00:00,masc,$2a$10$OaF3gpc83nJymHnJoMMYhepN5qsHSK7H2Cf6W2o.X.Mkq2lA4ndn6,False
+efranco23@gmail.com,efranco23@gmail.com,Eder Franco,1983-06-17 00:00:00+00:00,masc,$2a$10$ltQHM1Z1HHdAliGC814gvOAt1aRPbs1.WZXsv6PTs1PYBldvybJxW,False
+vanilton18@gmail.com,vanilton18@gmail.com,Vanilton Pinheiro,1990-09-25 00:00:00+00:00,masc,$2a$10$KqqjE0CiTTpdHTYmN1Tj/erG7pPhfYKjOIgiePvRSwyDk497GLdVq,False
+terezarafaellaprado@gmail.com,terezarafaellaprado@gmail.com,Tereza Rafaella Prado,1989-01-15 00:00:00+00:00,fem,$2a$10$8ZgnYoA6LxBTQQ9/Nx5BdeHuuf7xdLiNU3T3W0pOHrwkUFquOOzPS,False
+lidianevitorinosilva@gmail.com,lidianevitorinosilva@gmail.com,Lidiane Vitorino da Silva,1988-01-13 00:00:00+00:00,fem,$2a$10$XsJm2Fm8dWjKjtiMjTFUCuyAbIfi6W2SpiWGStLrpG.RDfO0qdrYe,False
+amd@icomp.ufam.edu.br,amd@icomp.ufam.edu.br,Aline Duarte ,1999-04-21 00:00:00+00:00,fem,$2a$10$140levEkwktAVicAkX4Lh.zhEXs9BfVlNO28hpaMhaxB0g9JejYTa,False
+tassiaforasteiro@gmail.com,tassiaforasteiro@gmail.com,Tassia,1998-08-10 00:00:00+00:00,fem,$2a$10$jHnpjf0rigH/KLdkQ2Rb4eVu1sKNc5npgedEaAD3MxAjbhazZ3aiq,False
+alanthiago201598@gmail.com,alanthiago201598@gmail.com,Alan Thiago,1998-12-04 00:00:00+00:00,masc,$2a$10$k/4czjk/kv6S1dcqHEWt3.b6XY1MTJXHZOXhyfUFATmhI6QHheAj6,False
+mateus.said@gmail.com,mateus.said@gmail.com,Mateus,1989-04-02 00:00:00+00:00,masc,$2a$10$J3B4D8VGCwe0jroj3SZZsurcOqwDY.8u4angAzNgs8eN0.n4T5fcu,False
+rmlcesar@gmail.com,rmlcesar@gmail.com,Romulo Cardoso,1988-04-28 00:00:00+00:00,masc,$2a$10$2lz9C5PE3i3KMopo8lT60O4AqYuiS4NTkwPYXinqJCNx7XMhCBE5u,False
+carla.oran@gmail.com,carla.oran@gmail.com,Carla Oran Fonseca de Souza,1977-07-27 00:00:00+00:00,fem,$2a$10$2PRqI5GMXABVVg1X95DRoOX0cx0FXTL5qBKGbD1szxKgOFm/I69B6,False
+rcaetano@fpf.br,rcaetano@fpf.br,ROGERIO CAETANO,1970-06-11 00:00:00+00:00,masc,$2a$10$6fWwcNMpeoziSxCZfCT2mejFCuh.RrZJ.tM2pNgCGeyWhSZZrQ4gC,False
+alvaro.azevedo.peres@gmail.com,alvaro.azevedo.peres@gmail.com,Álvaro Peres,1996-05-04 00:00:00+00:00,masc,$2a$10$lSPg63KLGEXX2tH58yEqte/wZe7PpqhhA72QJ1uM9DyCHHewaUB2C,False
+gizellysteffanny@gmail.com,gizellysteffanny@gmail.com,Gizelly Stefanny,1998-12-24 00:00:00+00:00,fem,$2a$10$h3t3W6TmnHtoz/XafjCM3O1Be9EPd7bqn75aw9gqRLFswTHdHSAnC,False
+k.andrea.borges@gmail.com,k.andrea.borges@gmail.com,Karla Borges,1991-07-27 00:00:00+00:00,fem,$2a$10$kdoq7NBVApY8lTHM5Bh2u.x84nxsv5aGM/j9nm91buFR/yQdIFgtm,False
+elentaila@gmail.com,elentaila@gmail.com,Elen Couto,1993-04-24 00:00:00+00:00,fem,$2a$10$kLW3QEYUG.45AKYsRA3sJebnp2T3VS4YvQbIBkgszKiMBaCKLVjVu,False
+leandrobrando2@hotmail.com,leandrobrando2@hotmail.com,Leandro,1995-11-04 00:00:00+00:00,masc,$2a$10$MAGvn1dxQVfSUXvA9tvAzOoVTIGIOS/yJrZDl5qZY.o5sNDxd/CFK,False
+hidaka.gaia@gmail.com,hidaka.gaia@gmail.com,JOAO BATISTA HIDAKA DE OLIVEIRA GAIA,1989-04-07 00:00:00+00:00,masc,$2a$10$qO75.EOgOVX3mi7rKPMp9ONJ940Th8JBA8RXkIabyC4.TELIqb42S,False
+mikaella_paula@hotmail.com,mikaella_paula@hotmail.com,Mikaella,1997-10-24 00:00:00+00:00,fem,$2a$10$Wq0EfuCw5gNcZgZpvsu1MOXFnmAsggvDEkWTMCfrb2gnkCX4.XyUe,False
+diegoramon.m@gmail.com,diegoramon.m@gmail.com,Diego Ramon,1987-07-27 00:00:00+00:00,masc,$2a$10$egRhQ.1LiZRlkEF.6.xHIupTTrIh8jl3OvZP7mPwWqLzhapk54KHG,False
+leticiagoncalvesp@gmail.com,leticiagoncalvesp@gmail.com,Letícia Gonçalves,1993-05-14 00:00:00+00:00,fem,$2a$10$KCRAvrwX0/saXcdV4MdxbeROr.7Rx1tndxJSJyBscoFFpvXe4Eb02,False
+lmmfranco@gmail.com,lmmfranco@gmail.com,Luiz Marcelo Martins Franco,1990-09-09 00:00:00+00:00,masc,$2a$10$s/nvX01pD.v1WAZ4dh4b7utXO7G8DF1GVB7hmCF54giq467/rLzKS,False
+albertoacgoncalves@gmail.com,albertoacgoncalves@gmail.com,Alberto Gonçalves,1998-03-31 00:00:00+00:00,masc,$2a$10$X1wCNJlKKCJyoXjvOZ3EieV0nVnyuqp/5JsZY3YiFNvqhtqGTieBy,False
+flavia.assisp26@gmail.com,flavia.assisp26@gmail.com,Flávia,1992-12-26 00:00:00+00:00,fem,$2a$10$4pOrh3wTKmZlUq6Y/RA4y.OqhYHsA5yTku92gz75fVB.OdgNK0i62,False
+janabragaaa@gmail.com,janabragaaa@gmail.com,Janaína Braga,1990-09-10 00:00:00+00:00,fem,$2a$10$GqNrCF35QvWzSbo.VcHDCeUgkXyQhOaXh.OqtH/O650GSGCv4tWlK,False
+lalalaever@gmail.com,lalalaever@gmail.com,Laura,2001-05-04 00:00:00+00:00,fem,$2a$10$YotlpR/mGRL7T./LmT2Ll.bJ6BtyzEI2pWNgPEMqJJNVdU3EMVCM2,False
+clocy@hotmail.com,clocy@hotmail.com,Clocy dos Santos Bonetti filho,1981-12-31 00:00:00+00:00,masc,$2a$10$wvc/Gnx5JLqMqBQABjOOUeV.rxj8tsEubSlTnskGT5xRv4EzYpome,False
+navvabportelas12@Hotmail.com,navvabportelas12@Hotmail.com,Navvab,1991-04-12 00:00:00+00:00,fem,$2a$10$mQzzB8jQPTM3GV2AkLGmNOV3XCa/qat3Pvz085pkyB2cNQmFsFG3S,False
+bianca.dias@icomp.ufam.edu.br,bianca.dias@icomp.ufam.edu.br,Bianca Silva Dias,2000-11-06 00:00:00+00:00,fem,$2a$10$qctU4Fuq4YCziD.Tm3l/AevE0bXr47aQOTWMvY3w8lN2DKQcVLQq2,False
+rebeka.rgomes@outlook.com,rebeka.rgomes@outlook.com,Rebeka Gomes,2000-03-19 00:00:00+00:00,fem,$2a$10$HBw3Ap87VLNYRY..zpE1OOJ7x1EhbMSAYQYdM..tHLyTcPNO.2xzS,False
+evysouza1303@gmail.com,evysouza1303@gmail.com,Evellyn de Souza,2002-03-13 00:00:00+00:00,fem,$2a$10$dE6t9rcPN4Rl8zJdFAeikOwvTYGQBbfoye9X.4dx/TlCP8So86cie,False
+lucasapchagas@gmail.com,lucasapchagas@gmail.com,Lucas Afonso,2001-11-24 00:00:00+00:00,masc,$2a$10$P1.tj9HbjAovt9VocxMjyu9bTv.eMjG8reuB85bfEwvXbuxye6thy,False
+gas0306@outlook.com,gas0306@outlook.com,Giovanna Andrade Santos,2002-06-03 00:00:00+00:00,fem,$2a$10$swfbLRHfUTW/ouspjl2xaeM18W98FZyk6nRNME4D/U6MIGENYES9W,False
+fireroger36@gmail.com,fireroger36@gmail.com,Roger Vieira,2002-05-18 00:00:00+00:00,masc,$2a$10$edjYBDL9S1Ax2rn0uK0ZleEBbhFgn7K.W0vUQONbS0IN5nPcFFyhq,False
+khalylfreitas@gmail.com,khalylfreitas@gmail.com,Khalyl Rocha de Freitas,2002-12-12 00:00:00+00:00,masc,$2a$10$yMYghU3KppYDSezKnXzfuOYtCVi6jY1E3Kj2zSWTQkTQqsUFQZ.nG,False
+senakarine41@gmail.com,senakarine41@gmail.com,Karine,2001-11-03 00:00:00+00:00,fem,$2a$10$yL4KjsGMzcKruCSAQVLlGO25OvuvKsxkZwiHiSTNQUtIuH1nIid2G,False
+jlmdsjoseleandro@gmail.com,jlmdsjoseleandro@gmail.com,José Leandro de Melo Sousa ,2001-09-30 00:00:00+00:00,masc,$2a$10$2UwDs6q1D9gJX.VwiCpGEOXMHkh/ORoqWQuzCXSg3oSuApao6WoSq,False
+Vineksgard@gmail.com,Vineksgard@gmail.com,Kettlen,2002-03-02 00:00:00+00:00,masc,$2a$10$GP.eL74vhljt5SL8NkAW8.n.nAtTC1n6BFpvX42h3dl7YaLoorxMm,False
+luanc6po@gmail.com,luanc6po@gmail.com,Luan,2002-07-24 00:00:00+00:00,masc,$2a$10$iDt3nMEQReqPncQ.S6D2u.cYq6JhvA6HkMdO8evLsyjgeJUgoXt1C,False
+gabriel_santo5@outlook.com,gabriel_santo5@outlook.com,Gabriel Santos,2001-04-29 00:00:00+00:00,masc,$2a$10$eYhjoIrg0XYFTny3UQhK9.T4FSDX.1.AOzrY4oe22PNGaInCN8Ucm,False
+nasthya2011@gmail.com,nasthya2011@gmail.com,Nasthya,2001-12-06 00:00:00+00:00,fem,$2a$10$ALxIOWqtdtoIn3G7JvK7N.5LoQXcVTwwdyZIORlvqcXOgbYVg.mFm,False
+bebelg14@outlook.pt,bebelg14@outlook.pt,Isabel Cunha,2003-03-01 00:00:00+00:00,fem,$2a$10$JpBPaz1/cyIOeyEHdYnp.u8ZP37ufkVRYWtuIVrxmoTHk8G8cCxDW,False
+matheus.palheta@gmail.com,matheus.palheta@gmail.com,Matheus Palheta,2001-11-18 00:00:00+00:00,masc,$2a$10$HtL2I7tWUvHbG2Ws7AKMkOnwRmEb71Vuhuz6VXIECTHs1V3i7Mo4e,False
+klintongeanm@gmail.com,klintongeanm@gmail.com,Klin,2003-06-03 00:00:00+00:00,masc,$2a$10$xMxTDJWbY46uqSSU3D5Bq./8OqIW9VyvrzcgPIvfnfryrfnOcww6m,False
+rodrigosc6152@gmail.com,rodrigosc6152@gmail.com,Rodrigo Santos,2001-06-13 00:00:00+00:00,masc,$2a$10$0qQf6pNWp20wC5IfPOc3/OnPS/MEgihXs9UUmLhoIkmnum4zn80Zq,False
+beatitalins2@gmail.com,beatitalins2@gmail.com,Beatriz,2002-05-11 00:00:00+00:00,fem,$2a$10$wWNPVuBF1Dg8bXMfrnW.P.dl0LgAWhB/lrWZWMBDZt4ULdlfRCSya,False
+taycruz424242@gmail.com,taycruz424242@gmail.com,Tay,2001-09-24 00:00:00+00:00,fem,$2a$10$ccLnGS.eiXeuqTxwwFozqeAfT2NEFcq7.kVfhYdklYKzh4VxYDoUW,False
+jvicthorvieira@gmail.com,jvicthorvieira@gmail.com,José Victhor,2002-11-12 00:00:00+00:00,masc,$2a$10$Ebzl2YXLbEHYQEwy9xMFOepPrLV.yXdgjwHnq6g7XZrGnGlta.rVS,False
+ovatsugolebar15@gmail.com,ovatsugolebar15@gmail.com,Gustavo,2001-11-21 00:00:00+00:00,masc,$2a$10$GWvGXyE1XnTXU.HSDZzApOUUGXy6FwYldyPIRg5qhlqZ4VxFGMq8y,False
+geowaldo2000@hotmail.com,geowaldo2000@hotmail.com,Geowaldo,2000-01-04 00:00:00+00:00,masc,$2a$10$J3qgHuhcMIHdg0YnBXlnKO9xiTQUIkCBSLxSWUSWgZkYeaFxwocce,False
+belle.serique@gmail.com,belle.serique@gmail.com,Isabelle,2002-02-18 00:00:00+00:00,fem,$2a$10$sW9GN1XNDwiepN9gFGOJUe/6LYWoPzvNDIqLFKsHbxt/GJxV.9u6u,False
+Raquellitaiff@hotmail.com,Raquellitaiff@hotmail.com,Ida Raquel Litaiff,2002-05-02 00:00:00+00:00,fem,$2a$10$FyUeAPzebFYMO8V1GKfubevTTzvQf66TUhhOL7FgpI1raJzONDnS6,False
+biaasantos2003@gmail.com,biaasantos2003@gmail.com,Beatriz,2002-01-18 00:00:00+00:00,fem,$2a$10$5R1wqScQAWqqJrkxU613E.KMUW244IO3JZXd0LQ74HhrALxCE/Z6W,False
+soueuadudaduda@gmail.com,soueuadudaduda@gmail.com,Duda,2002-08-10 00:00:00+00:00,fem,$2a$10$LmQJ24GdH9iFOTCbZblK0uGTT2BKKlPoFASjKcx3JEN/U4twGi4TO,False
+sharasilva91@gmail.com,sharasilva91@gmail.com,Shara Silva,2002-03-21 00:00:00+00:00,fem,$2a$10$Wb.ycGD/Guiar./dcVgbou855MgoF7SwMj3VE7EYGHuJbmSbowT76,False
+gabrielferreira.kopi@gmail.com,gabrielferreira.kopi@gmail.com,Gabriel Ferreira Santos,2002-04-22 00:00:00+00:00,masc,$2a$10$uyLvG1Sv5U67WLR05NkBKuMtTqjk5Ia/sB.xheg93hCUtJOHCEO8K,False
+margarida12jatty@gmail.com,margarida12jatty@gmail.com,Margarida ,2001-09-12 00:00:00+00:00,fem,$2a$10$jj.KZnsAvBLLOlvdow3zuuYklAFpt6PeDzL6HzP87zRNukYQHTG9i,False
+ladybruxa69@gmail.com,ladybruxa69@gmail.com,Fernanda Amazonas,2003-06-24 00:00:00+00:00,fem,$2a$10$UDPR9vqHVqLTWGbIoIY/Geg.y44Sb0sFTMbnBUpOHqsD/5eg.w0AW,False
+nataliapantoja011@gmail.com,nataliapantoja011@gmail.com,Natália Heloiza,2002-10-04 00:00:00+00:00,fem,$2a$10$dNNHKAQCWaMjlbhTSbcqcOWo912ZX2VnTjUkO4JnfQuuTTpaZDcwq,False
+rebecapedrosa2019@gmail.com,rebecapedrosa2019@gmail.com,Rebeca Freitas,2002-04-27 00:00:00+00:00,fem,$2a$10$frfaL058SvgMbPTHfaPdN.3uBUz.nhO/Hn0Wu2ah5fyeqVKXflgYy,False
+dan.inafuku@hotmail.com,dan.inafuku@hotmail.com,Danilo Isamu,2001-08-08 00:00:00+00:00,masc,$2a$10$eunYQAlBzfi2CSLkfoJbX.HgzdRxvzHdrD.ujsFjpaBbSNrbKt6iq,False
+moisespaz678@gmail.com,moisespaz678@gmail.com,MOISES ,2001-06-01 00:00:00+00:00,masc,$2a$10$2jdFLHoWpio2iv8liZ4CyO0iUnGbxzgiVsBukcV0WSI26IysgUG6u,False
+bekhilda2015@gmail.com,bekhilda2015@gmail.com,Rebeca Matos,2002-04-27 00:00:00+00:00,fem,$2a$10$HARnqoP5o25HL5B.M/lHIu1j6o9AJBdOzyh1PFjZe2YPTd4XNHd2S,False
+leticia.publi@gmail.com,leticia.publi@gmail.com,Leticia,1998-05-22 00:00:00+00:00,fem,$2a$10$mSLFwxt0BQajFd2D/vy64eTw1jmQLkFgGf9TTljAh85KK9.dQxS9S,False
+robertamerly@gmail.com,robertamerly@gmail.com,Pedro,1977-02-04 00:00:00+00:00,masc,$2a$10$ezAeY7fcsrQYT3x5sTcwLu5/SPSvmOn0h76kWpzg7rmazPXLwEHq6,False
+arthurazevedo2208@gmail.com,arthurazevedo2208@gmail.com,Arthur Sousa,2002-08-22 00:00:00+00:00,masc,$2a$10$N6naCjF.6T1jdy6XH7Ydb.KIOej8L7lw0BfecdG1z8Bw/MeXKrCza,False
+viniciuslopesk2@gmail.com,viniciuslopesk2@gmail.com,Vinícius Lopes,2001-12-01 00:00:00+00:00,masc,$2a$10$dp3v4LPCogwRMczJzw0PHutbPG16zCVwxrsGfPRCEt3eHWTVFcjNa,False
+v.victor.m@outlook.com,v.victor.m@outlook.com,Victor ,2000-10-27 00:00:00+00:00,masc,$2a$10$rpf/AqAvy5/Ts5OxeovPduPAy.MPzZ1GcD6jZbJpIDr238Eguwae6,False
+guilhermegono6@gmail.com,guilhermegono6@gmail.com,Guilherme,2000-12-20 00:00:00+00:00,masc,$2a$10$KLZlwaHnTroQqwvDBI4Vc.7ZBivBMb4AfEg5Ltfyt5EbGKbdh83iW,False
+nicoleamagalhaes@gmail.com,nicoleamagalhaes@gmail.com,Nicole ,1997-09-06 00:00:00+00:00,fem,$2a$10$HWFn60.15l3GxFqRTAUinelXl0hnlf6roi5tKx10P1Tuz4FHcF2wK,False
+phelipe.eduardo14@gmail.com,phelipe.eduardo14@gmail.com,Phelipe,1998-06-22 00:00:00+00:00,masc,$2a$10$48MyW5ON6Q8Kz0S6sNzOduHFEeskcP/vEK2PfUztxxFc..GyTSd3.,False
+soraya.grijo2016@gmail.com,soraya.grijo2016@gmail.com,Soraya Grijó,1999-08-29 00:00:00+00:00,fem,$2a$10$tfQIpIUnMnID/xyAxo9Ah.mGOUNRImWbj/Ru0hjUQHaTQndR9rn.i,False
+anaiisrc@gmail.com,anaiisrc@gmail.com,anaiis ramos de castro,2000-01-29 00:00:00+00:00,fem,$2a$10$XrQB4f2fxdinJ0ZyakcxlOoeyXS/QnjUllgqrRjthcUi7NvOJPFwK,False
+leticiasdaraujo@icloud.com,leticiasdaraujo@icloud.com,Letícia Araújo,2003-01-26 00:00:00+00:00,fem,$2a$10$YdsCpATXseabQFA/zgfB9O1k1lMZZwXg65CRPddKlsEI6MYTrlQhK,False
+bringelisabelle@gmail.com,bringelisabelle@gmail.com,Isabelle Bringel,1999-09-09 00:00:00+00:00,fem,$2a$10$8VpjjsTaDif7wCntjdB37.OUN7WVzz7hvGAuAowsHd5WK3ShOLTe.,False
+jean_carlo291@hotmail.com,jean_carlo291@hotmail.com,Jean,2002-11-29 00:00:00+00:00,masc,$2a$10$3sO4vcRTpFg6ptRvH5iqCeLKXWjKYFmfeuQGW/earFuJMdMnquO.a,False
+claudiaasimao@gmail.com,claudiaasimao@gmail.com,Claudia Simão,1991-08-29 00:00:00+00:00,fem,$2a$10$fVQQGSwvH9Wkvi9SJcJ8j.yLuqZwdottJI8LshfS.784uju4lH3aq,False
+fgldn.eng@uea.edu.br,fgldn.eng@uea.edu.br,Felipe,1996-12-24 00:00:00+00:00,masc,$2a$10$gWVNtkQF67JoEk1rHUdl9.TwuOJNeq14Dq15dYmhJG6nwHhozbkom,False
+rayane.karol98@gmail.com,rayane.karol98@gmail.com,Rayane Rocha ,1998-08-20 00:00:00+00:00,fem,$2a$10$aSQYdkWruJrdFazOfFW2H.Ua./XNMsGhI7jDwvTSLNKK2/PvfmVbm,False
+nataliabarrosg@live.com,nataliabarrosg@live.com,Natalia,1996-05-09 00:00:00+00:00,fem,$2a$10$Yg69gy4sYt8pb20WQnvy6uKH9FNueN0F15/LDoCJ9jVBcdQrSvOgu,False
+miguelventuracampos@gmail.com,miguelventuracampos@gmail.com,miguel ventura da silva campos,1995-03-03 00:00:00+00:00,masc,$2a$10$uloctRkh.l538eCqTLu9TOi62yJUzxwwJkuRPdZDnlRpQwPCYxz7.,False
+jrbarbosa_costa@hotmail.com,jrbarbosa_costa@hotmail.com,Junior,1994-09-16 00:00:00+00:00,masc,$2a$10$X6RtGNmIc2duFLsMti3/quLB/xIorlYWNTNHD.Vayq.UGg7x8iyqi,False
+0umekl0@gmail.com,0umekl0@gmail.com,melissa,1999-05-20 00:00:00+00:00,fem,$2a$10$j7V2mbzKL/jp/Jcrf2ndNe96e0DukAZFExY9suOh/Yu7Lgqpivi.y,False
+gabrielabessa15@gmail.com,gabrielabessa15@gmail.com,Gabriela ,1999-01-15 00:00:00+00:00,fem,$2a$10$CBNFaeyOJaBJ4IrNH6OX.eGCd0UFEK1/YLUHWLJH.ry3sRNJ9AIZ.,False
+thaynamoraes@icloud.com,thaynamoraes@icloud.com,Thayna,1998-11-16 00:00:00+00:00,fem,$2a$10$JsyJWKjvxVU1xBp4L7uA4eFpkwbqduYORk0t3OjyE7Pbgh0wWi0Hi,False
+ingridl96@hotmail.com,ingridl96@hotmail.com,Ingrid,1996-05-24 00:00:00+00:00,fem,$2a$10$M5ukkdhTYY7akIV.yDV.Tel5Bt/ty.xCIBUUuMLwv4Q7qJvF4k8GC,False
+ferreiravivian28@gmail.con,ferreiravivian28@gmail.con,vivian ferreira,1999-04-06 00:00:00+00:00,fem,$2a$10$kS0fey.d9NCk5ALD.DhhxOHT3Bd8X183LgcrujmyMR/2SIPIAwgxm,False
+bia.cavalcantii@hotmail.com,bia.cavalcantii@hotmail.com,Bianca Cavalcanti Viana,1998-02-24 00:00:00+00:00,fem,$2a$10$SUtP2X8NcK8BoLz8PT06Ley14ZQYJ5PV5hzOfOJwrMSNiTQpET26i,False
+mdsrah@outlook.com,mdsrah@outlook.com,Raíssa,1999-07-21 00:00:00+00:00,fem,$2a$10$Jm16S40iN/0RQUNbdy8GfOD/qUZc9M9zgqw2fPt5EtdsOaDkemLkO,False
+pollyanarsz1@gmail.com,pollyanarsz1@gmail.com,Pollyana Silveira,2001-10-14 00:00:00+00:00,fem,$2a$10$00hl0.dKVXXlg.IcwtNo3esIE7oC6pCcRdluHfOmXmeb4gxFp/pUW,False
+alissareis60@gmail.com,alissareis60@gmail.com,Alissa costa dos reis ,1996-11-26 00:00:00+00:00,fem,$2a$10$RKe7oOVuTashxMGcWIzk6uwCxwOs4v/l/MFCNTLt3mdDYkRaumoZS,False
+adria.queiroz.31@outlook.com,adria.queiroz.31@outlook.com,Ádria,2001-05-31 00:00:00+00:00,fem,$2a$10$RhgX0o/Dfy2QOi.6eYwtT.5bqVsM7jLnR6L6DPJdMFioZzhHLfHD6,False
+gabgoomes@gmail.com,gabgoomes@gmail.com,Gabriela Almeida,1996-09-12 00:00:00+00:00,fem,$2a$10$uFBGYHFHAohxsvhkLsQfW.AIZdpq7ZYqXR34zy0uAVLO0xn1mTd/m,False
+bruna.paloma1@gmail.com,bruna.paloma1@gmail.com,Bruna Cuesta,1998-06-04 00:00:00+00:00,fem,$2a$10$oqqFgB1i..NKkMqeVKfP4OkTXQourSMZwuLE.CUCgF3KGqqC9BaF6,False
+thaissrrodrigues@gmail.com,thaissrrodrigues@gmail.com,Thaís Rodrigues,1998-05-14 00:00:00+00:00,fem,$2a$10$7VnJaCD0lqWl2OTxrAc3NOlDlGI9yvD3Q6XoZCkYe6F1BXfSXm7dG,False
+nathaliacmbessa@gmail.com,nathaliacmbessa@gmail.com,Bessa,1995-03-23 00:00:00+00:00,fem,$2a$10$A5Xldn63g8bIdJ8sKKiYjewFFWCdeQD95lEuyA.NbqYes1jM2Pr4a,False
