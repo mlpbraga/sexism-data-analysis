@@ -1,0 +1,1060 @@
+{
+	"info": {
+		"_postman_id": "f66211c2-b7af-4dc6-b029-18cd42d3f290",
+		"name": "node-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "success",
+					"item": [
+						{
+							"name": "auth with username",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1e47cfb6-962a-49da-9842-c73172bee0b8",
+										"exec": [
+											"pm.test('POST auth with username response should have status code 202', () => {",
+											"    pm.response.to.have.status(202);",
+											"})",
+											"",
+											"pm.test('POST auth with username response should be okay to process', function () {",
+											"    pm.response.to.not.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.expiresIn).to.be.an('number')",
+											"    pm.expect(jsonData.token).to.be.an('string')",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"{{user}}\",\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth with email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1e47cfb6-962a-49da-9842-c73172bee0b8",
+										"exec": [
+											"pm.test('POST auth with email response should have status code 202', () => {",
+											"    pm.response.to.have.status(202);",
+											"})",
+											"",
+											"pm.test('POST auth with email response should be okay to process', function () {",
+											"    pm.response.to.not.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.expiresIn).to.be.an('number')",
+											"    pm.expect(jsonData.token).to.be.an('string')",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"{{email}}\",\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "bad request",
+					"item": [
+						{
+							"name": "auth missing password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fd3de602-386c-4462-a4a9-29ae8630b6e4",
+										"exec": [
+											"pm.test('POST auth missing password response should have status code 400', () => {",
+											"    pm.response.to.have.status(400);",
+											"})",
+											"",
+											"pm.test('POST auth missing password response should be okay to process', function () {",
+											"    pm.response.to.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.code).to.be.eql(400);",
+											"    pm.expect(jsonData.message).to.be.eql('Missing password field');",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"{{user}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth missing username and email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fd3de602-386c-4462-a4a9-29ae8630b6e4",
+										"exec": [
+											"pm.test('POST auth missing missing email or username password response should have status code 400', () => {",
+											"    pm.response.to.have.status(400);",
+											"})",
+											"",
+											"pm.test('POST auth missing email or username response should be okay to process', function () {",
+											"    pm.response.to.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.code).to.be.eql(400);",
+											"    pm.expect(jsonData.message).to.be.eql('Missing email or username');",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth having username and email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "fd3de602-386c-4462-a4a9-29ae8630b6e4",
+										"exec": [
+											"pm.test('POST auth missing missing email or username password response should have status code 400', () => {",
+											"    pm.response.to.have.status(400);",
+											"})",
+											"",
+											"pm.test('POST auth missing email or username response should be okay to process', function () {",
+											"    pm.response.to.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.code).to.be.eql(400);",
+											"    pm.expect(jsonData.message).to.be.eql('Parameters \\\"email\\\" and \\\"username\\\" are mutually exclusive');",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"{{user}}\",\n\t\"email\": \"{{email}}\",\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "unauthorized",
+					"item": [
+						{
+							"name": "auth invalid email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2ec48093-9d37-41e3-8bf3-7fb805b1d249",
+										"exec": [
+											"pm.test('POST auth invalid email response should have status code 400', () => {",
+											"    pm.response.to.have.status(400);",
+											"})",
+											"",
+											"pm.test('POST auth invalid email response should be okay to process', function () {",
+											"    pm.response.to.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.code).to.be.eql(401);",
+											"    pm.expect(jsonData.message).to.be.eql('Invalid email or username');",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"invalid\",\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "auth invalid username",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2ec48093-9d37-41e3-8bf3-7fb805b1d249",
+										"exec": [
+											"pm.test('POST authinvalid username response should have status code 400', () => {",
+											"    pm.response.to.have.status(400);",
+											"})",
+											"",
+											"pm.test('POST auth invalid username response should be okay to process', function () {",
+											"    pm.response.to.be.error;",
+											"    var jsonData = pm.response.json();",
+											"    pm.expect(jsonData.code).to.be.eql(401);",
+											"    pm.expect(jsonData.message).to.be.eql('Invalid email or username');",
+											"});",
+											"",
+											"",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"invalid\",\n\t\"password\": \"{{password}}\"\n}"
+								},
+								"url": {
+									"raw": "{{env}}/auth",
+									"host": [
+										"{{env}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "success",
+							"item": [
+								{
+									"name": "users",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "514014f6-6d19-402d-96f2-a904975397b7",
+												"exec": [
+													"pm.test('GET users response should have status code 200', () => {",
+													"    pm.response.to.have.status(200);",
+													"})",
+													"",
+													"pm.test('GET users response should be okay to process', function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData).to.be.an('array');",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users query term",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "75ce7c4e-b914-4fe5-8f68-ef4732119ca6",
+												"exec": [
+													"pm.test('GET users query term response should have status code 200', () => {",
+													"    pm.response.to.have.status(200);",
+													"})",
+													"",
+													"pm.test('GET users query term response should be okay to process', function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData).to.be.an('array');",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{env}}/users?q=teste",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											],
+											"query": [
+												{
+													"key": "q",
+													"value": "teste"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users query id",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "3cad2391-8ebd-4392-a2d2-fa072e981630",
+												"exec": [
+													"pm.test('GET users query id response should have status code 200', () => {",
+													"    pm.response.to.have.status(200);",
+													"})",
+													"",
+													"pm.test('GET users query id response should be okay to process', function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData).to.be.an('object');",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{env}}/users?id=teste",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "teste"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "bad request",
+							"item": [
+								{
+									"name": "users missing authorization",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5f434056-251a-4fe4-adff-1d1a09e41127",
+												"exec": [
+													"pm.test('GET users missing authorization response should have status code 401', () => {",
+													"    pm.response.to.have.status(401);",
+													"})",
+													"",
+													"pm.test('GET users missing authorization response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(401);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing Authorization Token');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST",
+					"item": [
+						{
+							"name": "success",
+							"item": [
+								{
+									"name": "users",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8615fe0b-2636-4815-b56f-5dd0f72310a6",
+												"exec": [
+													"pm.test('GET users response should have status code 201', () => {",
+													"    pm.response.to.have.status(201);",
+													"})",
+													"",
+													"pm.test('GET users response should be okay to process', function () {",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData).to.be.an('array');",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"teste\",\n    \"email\": \"teste@email.com\",\n    \"name\": \"teste teste\",\n    \"birth\": \"2019-09-13T21:47:18.000Z\",\n    \"gender\": \"fem\",\n    \"password\": \"$2a$10$hVkeapu68jS6P1AjfguQ2OLJZ6UKi6W0HaQCLArTx356OpIcJshe6\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "bad request",
+							"item": [
+								{
+									"name": "users missing username",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "445a172b-0784-47c7-9033-2bc64675320c",
+												"exec": [
+													"pm.test('GET users missing username response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing email response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"username\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"teste@email.com\",\n    \"name\": \"teste teste\",\n    \"birth\": \"2019-09-13T21:47:18.000Z\",\n    \"gender\": \"fem\",\n    \"password\": \"$2a$10$hVkeapu68jS6P1AjfguQ2OLJZ6UKi6W0HaQCLArTx356OpIcJshe6\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users missing email",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "43b2cb5b-7107-4d4f-aeef-40bd79a42270",
+												"exec": [
+													"pm.test('GET users missing email response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing email response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"email\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"teste\",\n    \"name\": \"teste teste\",\n    \"birth\": \"2019-09-13T22:22:21.000Z\",\n    \"gender\": \"fem\",\n    \"password\": \"$2a$10$pW5e94RLg.tlWK.QtavSYOZnNuxseMGPu7kkLt5qxKEQiIMATnyOi\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users missing name",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "43b2cb5b-7107-4d4f-aeef-40bd79a42270",
+												"exec": [
+													"pm.test('GET users missing name response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing name response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"name\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"teste\",\n    \"email\": \"teste@email.com\",\n    \"birth\": \"2019-09-13T22:22:21.000Z\",\n    \"gender\": \"fem\",\n    \"password\": \"$2a$10$pW5e94RLg.tlWK.QtavSYOZnNuxseMGPu7kkLt5qxKEQiIMATnyOi\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users missing birth",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "43b2cb5b-7107-4d4f-aeef-40bd79a42270",
+												"exec": [
+													"pm.test('GET users missing birth response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing birth response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"birth\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"teste\",\n    \"email\": \"teste@email.com\",\n    \"name\": \"Teste Teste\",\n    \"gender\": \"fem\",\n    \"password\": \"$2a$10$pW5e94RLg.tlWK.QtavSYOZnNuxseMGPu7kkLt5qxKEQiIMATnyOi\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users missing gender",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "445a172b-0784-47c7-9033-2bc64675320c",
+												"exec": [
+													"pm.test('GET users missing gender response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing gender response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"gender\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"teste\",\n\t\"email\": \"teste@email.com\",\n\t\"name\": \"teste teste\",\n\t\"birth\": \"2019-09-13T22:22:21.000Z\",\n\t\"password\": \"$2a$10$pW5e94RLg.tlWK.QtavSYOZnNuxseMGPu7kkLt5qxKEQiIMATnyOi\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "users missing password",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "445a172b-0784-47c7-9033-2bc64675320c",
+												"exec": [
+													"pm.test('GET users missing password response should have status code 400', () => {",
+													"    pm.response.to.have.status(400);",
+													"})",
+													"",
+													"pm.test('GET users missing password response should be okay to process', function () {",
+													"    pm.response.to.be.error;",
+													"    var jsonData = pm.response.json();",
+													"    pm.expect(jsonData.code).to.be.eql(400);",
+													"    pm.expect(jsonData.message).to.be.eql('Missing \"password\" parameter');",
+													"});",
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NjgzNDYzODMwMDQsInN1YiI6InRlc3RlIiwidXNlcm5hbWUiOiJ0ZXN0ZSIsImVtYWlsIjoidGVzdGVAZW1haWwuY29tIiwiaXNzIjoicmVzdC5hcGkudGVtcGxhdGUiLCJleHAiOjE1NjgzNjE5MzUwMDQsImFsZ29yaXRobSI6IkhTMjU2IiwiYXVkIjoicmVzdC5hcGkudGVtcGxhdGUifQ.j5F34qkbGXnOifvm8gOYgI056ux9GpnYsaSojgxaOqs",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"username\": \"teste\",\n    \"email\": \"teste@email.com\",\n    \"name\": \"teste teste\",\n    \"birth\": \"2019-09-13T22:22:21.000Z\",\n    \"gender\": \"fem\"\n}"
+										},
+										"url": {
+											"raw": "{{env}}/users",
+											"host": [
+												"{{env}}"
+											],
+											"path": [
+												"users"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "PUT",
+					"item": [],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "DELETE",
+					"item": [],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

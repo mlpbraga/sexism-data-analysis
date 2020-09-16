@@ -1,0 +1,22 @@
+{
+  "port": 4444,
+  "host": "0.0.0.0",
+  "log": "debug",
+  "database": {
+    "host": "ec2-18-190-52-149.us-east-2.compute.amazonaws.com",
+    "user": "template",
+    "database": "templatedb",
+    "password": "templatedb",
+    "port": "5432"
+  },
+  "jwt": {
+    "issuer": "rest.api.template",
+    "buyerLifetimeSeconds": 15552000,
+    "buyerERPSeconds": 15552000,
+    "algorithm": "HS256"
+  },
+  "basicAuth": {
+    "login": "teste",
+    "password": "123"
+  }
+}

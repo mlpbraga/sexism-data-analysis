@@ -1,0 +1,6 @@
+node_modules/
+sql/
+postgres-data/
+sequelize-template/
+teste/
+.DS_Store

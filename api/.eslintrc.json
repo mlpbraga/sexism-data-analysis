@@ -1,0 +1,47 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "prefer-arrow-callback": "off",
+    "indent": [
+      2,
+      2
+    ],
+    "import/no-dynamic-require": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "max-len": [
+      "error",
+      80
+    ]
+  },
+  "globals": {
+    "rewire": true,
+    "expect": true,
+    "sinon": true
+  }
+}
