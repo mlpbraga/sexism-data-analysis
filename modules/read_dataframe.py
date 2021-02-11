@@ -6,6 +6,11 @@ DATAFRAME_PATH = './data/labeled-comments.csv'
 TF_QUANTITY = 100
 
 
+def intersection(lst1, lst2):
+    lst3 = [value for value in lst1 if value in lst2]
+    return lst3
+
+
 def get_vocabulary(df):
     count_vectorizer = CountVectorizer(lowercase=False, stop_words=[])
     cv_fit = count_vectorizer.fit_transform(df['content'])
@@ -31,6 +36,12 @@ def get_doc(df, chosen_words):
     return df['content'].apply(lambda y: ' '.join(
         [x for x in y.split() if x in chosen_words]))
 
+
+def get_bigram_doc(df, chosen_words):
+    def select_only_relevant_bigrams(text):
+        bigrams_in_text = [b for l in [text] for b in zip(l.split(" ")[:-1], l.split(" ")[1:])]
+        return ' '.join([' '.join(w) for w in bigrams_in_text if ' '.join(w) in chosen_words])
+    return df['content'].apply(select_only_relevant_bigrams)
 
 def get_relevant_words(df):
     return list(df.sort_values(
@@ -262,9 +273,9 @@ class Comments:
         self.tf_sexist_dataframe = pd.concat(
             [sexist_tf, not_sexist_tf]).fillna(0)
 
-        sexist_doc = get_doc(self.sexist_comments,
+        sexist_doc = get_bigram_doc(self.sexist_comments,
                              relevant_sexist_bigrams)
-        not_sexist_doc = get_doc(
+        not_sexist_doc = get_bigram_doc(
             self.not_sexist_comments, relevant_not_sexist_bigrams)
         sexist_bigrams_tf = pd.DataFrame(
             sexist_bigrams_vectorizer.fit_transform(sexist_doc).toarray())
@@ -285,9 +296,9 @@ class Comments:
         self.tf_not_sexist_dataframe = pd.concat(
             [sexist_tf, not_sexist_tf]).fillna(0)
 
-        sexist_doc = get_doc(self.sexist_comments,
-                             relevant_sexist_bigrams)
-        not_sexist_doc = get_doc(
+        sexist_doc = get_bigram_doc(self.sexist_comments,
+                                    relevant_sexist_bigrams)
+        not_sexist_doc = get_bigram_doc(
             self.not_sexist_comments, relevant_not_sexist_bigrams)
         sexist_bigrams_tf = pd.DataFrame(
             sexist_bigrams_vectorizer.fit_transform(sexist_doc).toarray())
