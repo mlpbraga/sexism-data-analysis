@@ -8,7 +8,7 @@ def select_features(dataframe, sub=None, column=None, columns=[]):
         M = np.concatenate([X_df], axis=1)
         X = pd.DataFrame(M)
     elif column == 'tf':
-        X_df = dataframe[dataframe.columns[:dataframe.shape[1] - 5]]
+        X_df = dataframe[dataframe.columns[:200]]
         M = np.concatenate([X_df], axis=1)
         X = pd.DataFrame(M)
     elif column == 'tf-sexist':
@@ -17,6 +17,22 @@ def select_features(dataframe, sub=None, column=None, columns=[]):
         X = pd.DataFrame(M)
     elif column == 'tf-no-sexist':
         X_df = dataframe[dataframe.columns[100:200]]
+        M = np.concatenate([X_df], axis=1)
+        X = pd.DataFrame(M)
+    elif column == 'sexist-bigrams':
+        X_df = dataframe[dataframe.columns[200:300]]
+        M = np.concatenate([X_df], axis=1)
+        X = pd.DataFrame(M)
+    elif column == 'not-sexist-bigrams':
+        X_df = dataframe[dataframe.columns[300:400]]
+        M = np.concatenate([X_df], axis=1)
+        X = pd.DataFrame(M)
+    elif column == 'bigrams':
+        X_df = dataframe[dataframe.columns[200:400]]
+        M = np.concatenate([X_df], axis=1)
+        X = pd.DataFrame(M)
+    elif column == 'tf-bigrams':
+        X_df = dataframe[dataframe.columns[:400]]
         M = np.concatenate([X_df], axis=1)
         X = pd.DataFrame(M)
     elif column is not None:
