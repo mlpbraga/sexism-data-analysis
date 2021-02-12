@@ -35,6 +35,12 @@ def select_features(dataframe, sub=None, column=None, columns=[]):
         X_df = dataframe[dataframe.columns[:400]]
         M = np.concatenate([X_df], axis=1)
         X = pd.DataFrame(M)
+    elif column == 'tf-u-l-d-c-w':
+        col_list = ['likes', 'dislikes', 'char-qty', 'word-qty']
+        list_features = [dataframe[dataframe.columns[list(dataframe.columns).index(x)]] for x in col_list]
+        X_1 = dataframe[dataframe.columns[:200]]
+        X_2 = pd.DataFrame(list_features).transpose()
+        X = pd.concat([X_1, X_2], axis=1)
     elif column is not None:
         X_df = dataframe[dataframe.columns[list(dataframe.columns).index(column)]]
         M = np.concatenate([X_df])

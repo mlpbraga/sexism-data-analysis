@@ -11,7 +11,7 @@ def grid_search(file_path, method, params, method_name, X_, y, reload=False):
     tm = time.time()
 
     if reload:
-        print('Executing Grid Search to %s.' % method_name)
+        # print('Executing Grid Search to %s.' % method_name)
         model = GridSearchCV(method,
                              param_grid=params,
                              cv=cv, n_jobs=12)
@@ -29,8 +29,8 @@ def grid_search(file_path, method, params, method_name, X_, y, reload=False):
             model.fit(X_, y)
             pickle.dump(model, open(file_path, 'wb'))
 
-    print('Model loaded in: @ %d seconds' %
-          (time.time() - tm))
+    # print('Model loaded in: @ %d seconds' %
+        #   (time.time() - tm))
     # print("The best parameters are %s with a score of %0.2f" %
     #       (model.best_params_, model.best_score_))
     print('-------------------------------------------------------------------------------------------')

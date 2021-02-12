@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
+import time
 from modules.grid_search import grid_search
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.metrics import precision_recall_fscore_support as score
 
-
+TIME = time.time()
 class BaseClassifier:
     def __init__(self, classifier, data_path, nickname):
         self.classifier = classifier
@@ -13,35 +14,35 @@ class BaseClassifier:
 
     def train_models(self, params, features, reload=False):
         self.features = features
-        self.model_tf, self.cv_tf = grid_search(
+        self.model_tf_unigrams, self.cv_tf_unigrams = grid_search(
             f'{self.data_path}/models/tf',
             self.classifier(),
             params,
-            f'{self.nickname} with TF',
-            features.tf,
+            f'{self.nickname} with TF of unigrams',
+            features.tf_unigrams,
             features.y,
             reload,
         )
-        self.model_tf_100_sexist_words, self.cv_tf_100_sexist_words = grid_search(
-            f'{self.data_path}/models/tf-100-sexist-words',
+        self.model_tf_sexist_unigrams, self.cv_tf_sexist_unigrams = grid_search(
+            f'{self.data_path}/models/tf-sexist-unigrams',
             self.classifier(),
             params,
-            f'{self.nickname} with TF of 100 sexist words',
-            features.tf_100_sexist_words,
+            f'{self.nickname} with TF of 100 sexist unigrams',
+            features.tf_sexist_unigrams,
             features.y,
             reload,
         )
-        self.model_tf_100_not_sexist_words, self.cv_tf_100_not_sexist_words = grid_search(
-            f'{self.data_path}/models/tf-100-not-sexist-words',
+        self.model_tf_not_sexist_unigrams, self.cv_tf_not_sexist_unigrams = grid_search(
+            f'{self.data_path}/models/tf-not-sexist-unigrams',
             self.classifier(),
             params,
-            f'{self.nickname} with TF of 100 not sexist words',
-            features.tf_100_not_sexist_words,
+            f'{self.nickname} with TF of 100 not sexist unigrams',
+            features.tf_not_sexist_unigrams,
             features.y,
             reload,
         )
         self.model_char_qty, self.cv_char_qty = grid_search(
-            f'{self.data_path}/models/char-qty-grid-search-model',
+            f'{self.data_path}/models/char-qty',
             self.classifier(),
             params,
             f'{self.nickname} with Char quantity',
@@ -49,7 +50,7 @@ class BaseClassifier:
             reload
         )
         self.model_word_qty, self.cv_word_qty = grid_search(
-            f'{self.data_path}/models/word-qty-grid-search-model',
+            f'{self.data_path}/models/word-qty',
             self.classifier(),
             params,
             f'{self.nickname} with Word quantity',
@@ -57,7 +58,7 @@ class BaseClassifier:
             reload
         )
         self.model_likes_qty, self.cv_likes_qty = grid_search(
-            f'{self.data_path}/models/likes-grid-search-model',
+            f'{self.data_path}/models/likes',
             self.classifier(),
             params,
             f'{self.nickname} with Likes quantity',
@@ -65,7 +66,7 @@ class BaseClassifier:
             reload
         )
         self.model_dislikes_qty, self.cv_dislikes_qty = grid_search(
-            f'{self.data_path}/models/dislikes-grid-search-model',
+            f'{self.data_path}/models/dislikes',
             self.classifier(),
             params,
             f'{self.nickname} with Dislikes quantity',
@@ -73,7 +74,7 @@ class BaseClassifier:
             reload
         )
         self.model_likes_dislikes_qty, self.cv_likes_dislikes_qty = grid_search(
-            f'{self.data_path}/models/likes-dislikes-grid-search-model',
+            f'{self.data_path}/models/likes-dislikes',
             self.classifier(),
             params,
             f'{self.nickname} with Likes and Dislikes quantity',
@@ -81,139 +82,168 @@ class BaseClassifier:
             reload
         )
         self.model_chars_words_qty, self.cv_chars_words_qty = grid_search(
-            f'{self.data_path}/models/chars-words-grid-search-model',
+            f'{self.data_path}/models/chars-words',
             self.classifier(),
             params,
             f'{self.nickname} with Chars and Words quantity',
-            features.char_word_qty, features.y,
+            features.chars_words_qty, features.y,
             reload
         )
         self.model_likes_dislikes_chars_words_qty, self.cv_likes_dislikes_chars_words_qty = grid_search(
-            f'{self.data_path}/models/likes-dislikes-chars-words-grid-search-model',
+            f'{self.data_path}/models/likes-dislikes-chars-words',
             self.classifier(),
             params,
             f'{self.nickname} with Likes, Dislikes, Chars and Words quantity',
-            features.likes_dislike_char_words, features.y,
+            features.likes_dislike_chars_words, features.y,
             reload
         )
-        self.model_bigrams, self.cv_bigrams = grid_search(
-            f'{self.data_path}/models/bigrams-grid-search-model',
+        self.model_tf_bigrams, self.cv_tf_bigrams = grid_search(
+            f'{self.data_path}/models/tf-bigrams',
             self.classifier(),
             params,
             f'{self.nickname} with Bigrams TF',
             features.tf_bigrams, features.y,
             reload
         )
-        self.model_ngrams_bigrams, self.cv_ngrams_bigrams = grid_search(
-            f'{self.data_path}/models/ngrams-bigrams-grid-search-model',
+        self.model_tf_unigrams_bigrams, self.cv_tf_unigrams_bigrams = grid_search(
+            f'{self.data_path}/models/tf_unigrams_bigrams',
             self.classifier(),
             params,
             f'{self.nickname} with Ngrams and Bigrams TFs',
-            features.tf_ngrams_bigrams, features.y,
+            features.tf_unigrams_bigrams, features.y,
             reload
         )
-        self.model_sexist_bigrams, self.cv_sexist_bigrams = grid_search(
-            f'{self.data_path}/models/sexist-bigrams-grid-search-model',
+        self.model_tf_sexist_bigrams, self.cv_tf_sexist_bigrams = grid_search(
+            f'{self.data_path}/models/tf-sexist-bigrams',
             self.classifier(),
             params,
             f'{self.nickname} with Sexist Bigrams TFs',
             features.tf_sexist_bigrams, features.y,
             reload
         )
-        self.model_not_sexist_bigrams, self.cv_not_sexist_bigrams = grid_search(
-            f'{self.data_path}/models/not-sexist-bigrams-grid-search-model',
+        self.model_tf_not_sexist_bigrams, self.cv_tf_not_sexist_bigrams = grid_search(
+            f'{self.data_path}/models/tf-not-sexist-bigrams',
             self.classifier(),
             params,
             f'{self.nickname} with Not Sexist Bigrams TFs',
             features.tf_not_sexist_bigrams, features.y,
             reload
         )
+        self.model_tf_unigrams_likes_dislikes_chars_words, self.cv_tf_unigrams_likes_dislikes_chars_words = grid_search(
+            f'{self.data_path}/models/tf-unigrams_likes_dislikes_chars_words-model',
+            self.classifier(),
+            params,
+            f'{self.nickname} with Unigrams TFs, Likes, Dislikes, Chars and Words quantity',
+            features.tf_unigrams_likes_dislikes_chars_words, features.y,
+            reload
+        )
 
     def report_results(self, features):
-        self.report_tf = self.cross_validation_report(features.tf,
-                                                      features.y,
-                                                      self.cv_tf,
-                                                      self.model_tf,
-                                                      f'{self.nickname} with TF')
-        self.print_report(self.report_tf)
-        self.report_tf_100_sexist_words = self.cross_validation_report(features.tf_100_sexist_words,
-                                                                       features.y,
-                                                                       self.cv_tf_100_sexist_words,
-                                                                       self.model_tf_100_sexist_words,
-                                                                       f'{self.nickname} with TF to 100 sexist words')
-        self.print_report(self.report_tf_100_sexist_words)
-        self.report_tf_100_not_sexist_words = self.cross_validation_report(features.tf_100_not_sexist_words,
-                                                                           features.y,
-                                                                           self.cv_tf_100_not_sexist_words,
-                                                                           self.model_tf_100_not_sexist_words,
-                                                                           f'{self.nickname} with TF to 100 not sexist words')
-        self.print_report(self.report_tf_100_not_sexist_words)
-        self.report_likes = self.cross_validation_report(features.likes,
-                                                         features.y,
-                                                         self.cv_likes_qty,
-                                                         self.model_likes_qty,
-                                                         f'{self.nickname} with Likes quantity')
-        self.print_report(self.report_likes)
-        self.report_dislikes = self.cross_validation_report(features.dislikes,
-                                                            features.y,
-                                                            self.cv_dislikes_qty,
-                                                            self.model_dislikes_qty,
-                                                            f'{self.nickname} with Disikes quantity')
-        self.print_report(self.report_dislikes)
-        self.report_likes_dislikes = self.cross_validation_report(features.likes_dislikes,
-                                                                  features.y,
-                                                                  self.cv_likes_dislikes_qty,
-                                                                  self.model_likes_dislikes_qty,
-                                                                  f'{self.nickname} with Likes and Disikes quantity')
-        self.print_report(self.report_likes_dislikes)
+        self.report_tf_unigrams = self.cross_validation_report(features.tf_unigrams,
+                                                               features.y,
+                                                               self.cv_tf_unigrams,
+                                                               self.model_tf_unigrams,
+                                                               f'{self.nickname} with Unigrams TFs')
+        self.print_report(self.report_tf_unigrams)
+
+        self.report_tf_sexist_unigrams = self.cross_validation_report(features.tf_sexist_unigrams,
+                                                                      features.y,
+                                                                      self.cv_tf_sexist_unigrams,
+                                                                      self.model_tf_sexist_unigrams,
+                                                                      f'{self.nickname} with TF to 100 sexist unigrams')
+        self.print_report(self.report_tf_sexist_unigrams)
+
+        self.report_tf_not_sexist_unigrams = self.cross_validation_report(features.tf_not_sexist_unigrams,
+                                                                          features.y,
+                                                                          self.cv_tf_not_sexist_unigrams,
+                                                                          self.model_tf_not_sexist_unigrams,
+                                                                          f'{self.nickname} with TF to 100 not sexist unigrams')
+        self.print_report(self.report_tf_not_sexist_unigrams)
+
         self.report_chars = self.cross_validation_report(features.char_qty,
                                                          features.y,
                                                          self.cv_char_qty,
                                                          self.model_char_qty,
                                                          f'{self.nickname} with Char quantity')
         self.print_report(self.report_chars)
+
         self.report_words = self.cross_validation_report(features.word_qty,
                                                          features.y,
                                                          self.cv_word_qty,
                                                          self.model_word_qty,
                                                          f'{self.nickname} with Word quantity')
         self.print_report(self.report_words)
-        self.report_chars_words = self.cross_validation_report(features.char_word_qty,
+
+        self.report_chars_words = self.cross_validation_report(features.chars_words_qty,
                                                                features.y,
                                                                self.cv_chars_words_qty,
                                                                self.model_chars_words_qty,
                                                                f'{self.nickname} with Char and Word quantity')
         self.print_report(self.report_chars_words)
-        self.report_likes_dislikes_chars_words = self.cross_validation_report(features.likes_dislike_char_words,
+
+        self.report_likes = self.cross_validation_report(features.likes,
+                                                         features.y,
+                                                         self.cv_likes_qty,
+                                                         self.model_likes_qty,
+                                                         f'{self.nickname} with Likes quantity')
+        self.print_report(self.report_likes)
+
+        self.report_dislikes = self.cross_validation_report(features.dislikes,
+                                                            features.y,
+                                                            self.cv_dislikes_qty,
+                                                            self.model_dislikes_qty,
+                                                            f'{self.nickname} with Disikes quantity')
+        self.print_report(self.report_dislikes)
+
+        self.report_likes_dislikes = self.cross_validation_report(features.likes_dislikes,
+                                                                  features.y,
+                                                                  self.cv_likes_dislikes_qty,
+                                                                  self.model_likes_dislikes_qty,
+                                                                  f'{self.nickname} with Likes and Disikes quantity')
+        self.print_report(self.report_likes_dislikes)
+
+        self.report_likes_dislikes_chars_words = self.cross_validation_report(features.likes_dislike_chars_words,
                                                                               features.y,
                                                                               self.cv_likes_dislikes_chars_words_qty,
                                                                               self.model_likes_dislikes_chars_words_qty,
                                                                               f'{self.nickname} with Likes, Dislikes, Char and Word quantity')
         self.print_report(self.report_likes_dislikes_chars_words)
-        self.report_bigrams = self.cross_validation_report(features.tf_bigrams,
-                                                           features.y,
-                                                           self.cv_bigrams,
-                                                           self.model_bigrams,
-                                                           f'{self.nickname} with Bigrams TFs')
-        self.print_report(self.report_bigrams)
-        self.report_ngrams_bigrams = self.cross_validation_report(features.tf_ngrams_bigrams,
-                                                                  features.y,
-                                                                  self.cv_ngrams_bigrams,
-                                                                  self.model_ngrams_bigrams,
-                                                                  f'{self.nickname} with Ngrams and Bigrams TFs')
-        self.print_report(self.report_ngrams_bigrams)
-        self.report_sexist_bigrams = self.cross_validation_report(features.tf_sexist_bigrams,
-                                                           features.y,
-                                                           self.cv_sexist_bigrams,
-                                                           self.model_sexist_bigrams,
-                                                           f'{self.nickname} with Seixst Bigrams TFs')
-        self.print_report(self.report_sexist_bigrams)
-        self.report_not_sexist_bigrams = self.cross_validation_report(features.tf_not_sexist_bigrams,
-                                                                              features.y,
-                                                                              self.cv_not_sexist_bigrams,
-                                                                              self.model_not_sexist_bigrams,
-                                                                              f'{self.nickname} with Not Sexist Bigrams TFs')
-        self.print_report(self.report_not_sexist_bigrams)
+
+        self.report_tf_bigrams = self.cross_validation_report(features.tf_bigrams,
+                                                             features.y,
+                                                             self.cv_tf_bigrams,
+                                                             self.model_tf_bigrams,
+                                                             f'{self.nickname} with Bigrams TFs')
+        self.print_report(self.report_tf_bigrams)
+
+        self.report_tf_sexist_bigrams = self.cross_validation_report(features.tf_sexist_bigrams,
+                                                                    features.y,
+                                                                    self.cv_tf_sexist_bigrams,
+                                                                    self.model_tf_sexist_bigrams,
+                                                                    f'{self.nickname} with Seixst Bigrams TFs')
+        self.print_report(self.report_tf_sexist_bigrams)
+
+        self.report_tf_not_sexist_bigrams = self.cross_validation_report(features.tf_not_sexist_bigrams,
+                                                                        features.y,
+                                                                        self.cv_tf_not_sexist_bigrams,
+                                                                        self.model_tf_not_sexist_bigrams,
+                                                                        f'{self.nickname} with Not Sexist Bigrams TFs')
+        self.print_report(self.report_tf_not_sexist_bigrams)
+
+        self.report_tf_unigrams_bigrams = self.cross_validation_report(features.tf_unigrams_bigrams,
+                                                                    features.y,
+                                                                    self.cv_tf_unigrams_bigrams,
+                                                                    self.model_tf_unigrams_bigrams,
+                                                                    f'{self.nickname} with Ngrams and Bigrams TFs')
+        self.print_report(self.report_tf_unigrams_bigrams)
+
+        self.report_tf_unigrams_likes_dislikes_chars_words = self.cross_validation_report(features.tf_unigrams_likes_dislikes_chars_words,
+                                                                    features.y,
+                                                                    self.cv_tf_unigrams_likes_dislikes_chars_words,
+                                                                    self.model_tf_unigrams_likes_dislikes_chars_words,
+                                                                    f'{self.nickname} with Unigrams TFs, Likes, Dislikes, Char and Word quantity')
+        self.print_report(self.report_tf_unigrams_likes_dislikes_chars_words)
+
 
     def cross_validation_report(self, X, y, cv, model, title):
         report = {
@@ -239,11 +269,28 @@ class BaseClassifier:
             report['confusion_matrix'] = pd.DataFrame(
                 c_matrix, columns=['T', 'F'], index=['T', 'F'])
 
+        nickname = ''
+        if 'SVM' in title:
+            nickname = 'svm'
+        elif 'KNN' in title:
+            nickname = 'knn'
+        elif 'RFC' in title:
+            nickname = 'rfc'   
+
+        with open(f'./data/{nickname}/reports/results_{TIME}.txt', 'a') as fp:
+            result_line = '{%.5f}&{%.5f}&{%.5f}&{%.5f}&{%.5f}&{%.5f} \\\\\n' % (np.mean(report["precision"]["1"]),
+                                                                         np.mean(report["precision"]["0"]),
+                                                                         np.mean(report["recall"]["1"]),
+                                                                         np.mean(report["recall"]["0"]),
+                                                                         np.mean(report["f1"]["1"]),
+                                                                         np.mean(report["f1"]["0"]))
+            fp.write(result_line)
+
         return report
 
     def print_report(self, report):
         print(f'>>>> {report["title"]} results')
-        print('\t\t sexist \t not-sexit')
+        print('\t\t sexist \t not-sexist')
         print('precision\t %.5f \t %.5f' % (
             np.mean(report["precision"]["1"]), np.mean(report["precision"]["0"])))
         print('recall\t\t %.5f \t %.5f' %
