@@ -44,23 +44,29 @@ def get_relevant_words(df):
     return list(df.sort_values(
         by=['diff'], ascending=False)['word'])
 
-
+def retrieve_comments_from_db(conn):
+    print('Retrieving from original database...')
+    labeled_comments = pd.read_sql_query(
+        'select * from results;', conn)
+    labeled_comments['label'] = labeled_comments['avg'].apply(
+        lambda x: 1 if x > 0.5 else 0 if x < 0.5 else -1)
+    labeled_comments['char-qty'] = labeled_comments['content'].apply(
+        lambda comment: len(comment))
+    labeled_comments['word-qty'] = labeled_comments['content'].apply(
+        lambda comment: len(comment.lower().split(' ')))
+    return labeled_comments
 class Comments:
-    def __init__(self, conn=None):
-        try:
-            labeled_comments = pd.read_csv(DATAFRAME_PATH)
-        except:
-            print('Retrieving from original database...')
-            labeled_comments = pd.read_sql_query(
-                'select * from results;', conn)
-            labeled_comments['label'] = labeled_comments['avg'].apply(
-                lambda x: 1 if x > 0.5 else 0 if x < 0.5 else -1)
-            labeled_comments['char-qty'] = labeled_comments['content'].apply(
-                lambda comment: len(comment))
-            labeled_comments['word-qty'] = labeled_comments['content'].apply(
-                lambda comment: len(comment.lower().split(' ')))
-            labeled_comments.to_csv(DATAFRAME_PATH, index=False)
-
+    def __init__(self, conn=None, remake=False, dataframe_path=DATAFRAME_PATH):
+        if remake:
+            labeled_comments = retrieve_comments_from_db(conn)
+            labeled_comments.to_csv(dataframe_path, index=False)
+        else:
+            try:
+                labeled_comments = pd.read_csv(dataframe_path)
+            except:
+                labeled_comments = retrieve_comments_from_db(conn)
+                labeled_comments.to_csv(dataframe_path, index=False)
+        print(f'-> Labeled comments dataframe avaliable in {dataframe_path}')
         self.labeled_comments = labeled_comments
         self.sexist_comments = labeled_comments[labeled_comments['avg'] > 0.5]
         self.not_sexist_comments = labeled_comments[labeled_comments['avg'] < 0.5]
@@ -70,7 +76,7 @@ class Comments:
         self._set_word_frequencies()
         self._set_bigrams_frequencies()
         self._set_tf()
-        self._set_feature_dataframe()
+        self._set_feature_dataframe(remake, dataframe_path)
 
     def _set_vocabularies(self):
         self.vocabulary, self.freq, self.word_list = get_vocabulary(
@@ -304,40 +310,48 @@ class Comments:
         self.tf_not_sexist_bigrams_dataframe = pd.concat(
             [sexist_bigrams_tf, not_sexist_bigrams_tf]).fillna(0)
 
-    def _set_feature_dataframe(self):
-        try:
-            print('...')
-            self.dataframe = pd.read_csv('./data/dataframe.csv')
-        except:
-            print('---')
+    def _generate_feature_dataframe(self):
+        print('-> Generating feature dataframe...')
+        likes_df = np.array(
+            pd.concat([self.sexist_comments['likes'], self.not_sexist_comments['likes']]).fillna(0))
+        dislikes_df = np.array(pd.concat(
+            [self.sexist_comments['dislikes'], self.not_sexist_comments['dislikes']]).fillna(0))
+        char_qty_df = np.array(pd.concat(
+            [self.sexist_comments['char-qty'], self.not_sexist_comments['char-qty']]).fillna(0))
+        word_qty_df = np.array(pd.concat(
+            [self.sexist_comments['word-qty'], self.not_sexist_comments['word-qty']]).fillna(0))
+        sexist_y = self.sexist_comments['avg'].apply(lambda x: 1)
+        not_sexist_y = self.not_sexist_comments['avg'].apply(lambda x: 0)
+        y_df = np.array(pd.concat([sexist_y, not_sexist_y]))
 
-            likes_df = np.array(
-                pd.concat([self.sexist_comments['likes'], self.not_sexist_comments['likes']]).fillna(0))
-            dislikes_df = np.array(pd.concat(
-                [self.sexist_comments['dislikes'], self.not_sexist_comments['dislikes']]).fillna(0))
-            char_qty_df = np.array(pd.concat(
-                [self.sexist_comments['char-qty'], self.not_sexist_comments['char-qty']]).fillna(0))
-            word_qty_df = np.array(pd.concat(
-                [self.sexist_comments['word-qty'], self.not_sexist_comments['word-qty']]).fillna(0))
-            sexist_y = self.sexist_comments['avg'].apply(lambda x: 1)
-            not_sexist_y = self.not_sexist_comments['avg'].apply(lambda x: 0)
-            y_df = np.array(pd.concat([sexist_y, not_sexist_y]))
+        tf_dataframe = pd.concat(
+            [self.tf_sexist_dataframe,
+                self.tf_not_sexist_dataframe,
+                self.tf_sexist_bigrams_dataframe,
+                self.tf_not_sexist_bigrams_dataframe], axis=1)
+        dataframe = tf_dataframe
+        dataframe['likes'] = likes_df
+        dataframe['dislikes'] = dislikes_df
+        dataframe['char-qty'] = char_qty_df
+        dataframe['word-qty'] = word_qty_df
+        dataframe['sexist'] = y_df
+        dataframe = dataframe.fillna(0)
+        dataframe = tf_dataframe.sample(frac=1)
+        return dataframe
 
-            tf_dataframe = pd.concat(
-                [self.tf_sexist_dataframe,
-                 self.tf_not_sexist_dataframe,
-                 self.tf_sexist_bigrams_dataframe,
-                 self.tf_not_sexist_bigrams_dataframe], axis=1)
-            dataframe = tf_dataframe
-            dataframe['likes'] = likes_df
-            dataframe['dislikes'] = dislikes_df
-            dataframe['char-qty'] = char_qty_df
-            dataframe['word-qty'] = word_qty_df
-            dataframe['sexist'] = y_df
-            dataframe = dataframe.fillna(0)
-            dataframe = tf_dataframe.sample(frac=1)
-            dataframe.to_csv('./data/dataframe.csv', index=False)
+    def _set_feature_dataframe(self, remake=False, dataframe_path='./data/dataframe.csv'):
+        df_path = dataframe_path.replace('labeled_comments', 'dataframe')
+        if remake:
+            dataframe = self._generate_feature_dataframe()
+            dataframe.to_csv(df_path, index=False)
             self.dataframe = dataframe
+        else:
+            try:
+                self.dataframe = pd.read_csv(df_path)
+            except:
+                dataframe = self._generate_feature_dataframe()
+                dataframe.to_csv(df_path, index=False)
+                self.dataframe = dataframe
 
     def print_frequecies_to_latex(self, type, limit=None):
         swicth = {
