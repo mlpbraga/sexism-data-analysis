@@ -1,0 +1,4 @@
+;sum_likes;sum_dislikes;avg_likes;avg_dislikes;min_likes;min_dislikes;max_likes;max_dislikes;median_likes;median_dislikes;label
+0;30265;22409;17.719555035128806;13.120023419203747;0;0;688;1196;7.0;2.0;sexista
+1;21407;10131;13.557314756174794;6.416086130462318;0;0;729;842;5.0;1.0;não sexista
+2;261;213;4.9245283018867925;4.018867924528302;0;0;21;44;4.0;2.0;não definido

@@ -5,6 +5,14 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 DATAFRAME_PATH = './data/labeled-comments.csv'
 TF_QUANTITY = 100
 
+def flesch_br(comment):
+    words_list = [x for x in comment.split(' ') if x != '']
+    sentence_list = [x for x in comment.replace('!','<END>').replace(',', '<END>').replace('.', '<END>').replace('?', '<END>').split('<END>') if x != '']
+    total_words = len(words_list)
+    total_sentences = len(sentence_list)
+    if total_words != 0 and total_sentences != 0:
+        return round(248.835 - (1.015 * (total_words/total_sentences)) - (84.6 * (total_sentences/total_words)),2)
+    return 0
 
 def get_vocabulary(df):
     count_vectorizer = CountVectorizer(lowercase=False, stop_words=[])
@@ -54,18 +62,20 @@ def retrieve_comments_from_db(conn):
         lambda comment: len(comment))
     labeled_comments['word-qty'] = labeled_comments['content'].apply(
         lambda comment: len(comment.lower().split(' ')))
+    labeled_comments['legibility-index'] = labeled_comments['content'].apply(flesch_br)
     return labeled_comments
+
 class Comments:
     def __init__(self, conn=None, remake=False, dataframe_path=DATAFRAME_PATH):
-        if remake:
+        if remake==True and conn!=None:
             labeled_comments = retrieve_comments_from_db(conn)
-            labeled_comments.to_csv(dataframe_path, index=False)
+            labeled_comments.to_csv(dataframe_path, index=False, sep=';')
         else:
             try:
-                labeled_comments = pd.read_csv(dataframe_path)
+                labeled_comments = pd.read_csv(dataframe_path, sep=';')
             except:
                 labeled_comments = retrieve_comments_from_db(conn)
-                labeled_comments.to_csv(dataframe_path, index=False)
+                labeled_comments.to_csv(dataframe_path, index=False, sep=';')
         print(f'-> Labeled comments dataframe avaliable in {dataframe_path}')
         self.labeled_comments = labeled_comments
         self.sexist_comments = labeled_comments[labeled_comments['avg'] > 0.5]
@@ -320,6 +330,8 @@ class Comments:
             [self.sexist_comments['char-qty'], self.not_sexist_comments['char-qty']]).fillna(0))
         word_qty_df = np.array(pd.concat(
             [self.sexist_comments['word-qty'], self.not_sexist_comments['word-qty']]).fillna(0))
+        legibility_index_df = np.array(pd.concat(
+            [self.sexist_comments['legibility-index'],self.not_sexist_comments['legibility-index']]).fillna(0))
         sexist_y = self.sexist_comments['avg'].apply(lambda x: 1)
         not_sexist_y = self.not_sexist_comments['avg'].apply(lambda x: 0)
         y_df = np.array(pd.concat([sexist_y, not_sexist_y]))
@@ -334,6 +346,7 @@ class Comments:
         dataframe['dislikes'] = dislikes_df
         dataframe['char-qty'] = char_qty_df
         dataframe['word-qty'] = word_qty_df
+        dataframe['legibility-index'] = legibility_index_df
         dataframe['sexist'] = y_df
         dataframe = dataframe.fillna(0)
         dataframe = tf_dataframe.sample(frac=1)
@@ -343,14 +356,14 @@ class Comments:
         df_path = dataframe_path.replace('labeled_comments', 'dataframe')
         if remake:
             dataframe = self._generate_feature_dataframe()
-            dataframe.to_csv(df_path, index=False)
+            dataframe.to_csv(df_path, index=False, sep=';')
             self.dataframe = dataframe
         else:
             try:
                 self.dataframe = pd.read_csv(df_path)
             except:
                 dataframe = self._generate_feature_dataframe()
-                dataframe.to_csv(df_path, index=False)
+                dataframe.to_csv(df_path, index=False, sep=';')
                 self.dataframe = dataframe
 
     def print_frequecies_to_latex(self, type, limit=None):

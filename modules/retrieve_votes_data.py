@@ -85,17 +85,17 @@ class Votes:
             if remake:  
                 self.votes_per_user = retrieve_users_from_db(conn)
                 self.vote_frequency = retrieve_vote_frequency(conn)
-                self.votes_per_user.to_csv(dataframe_path, index=False)
-                self.vote_frequency.to_csv(vote_frequency_path, index=False)
+                self.votes_per_user.to_csv(dataframe_path, index=False, sep=';')
+                self.vote_frequency.to_csv(vote_frequency_path, index=False, sep=';')
             else:
                 try:
-                    self.votes_per_user = pd.read_csv(dataframe_path)
-                    self.vote_frequency = pd.read_csv(vote_frequency_path)
+                    self.votes_per_user = pd.read_csv(dataframe_path, sep=';')
+                    self.vote_frequency = pd.read_csv(vote_frequency_path, sep=';')
                 except:
                     self.votes_per_user = retrieve_users_from_db(conn)
                     self.vote_frequency = retrieve_vote_frequency(conn)
-                    self.votes_per_user.to_csv(dataframe_path, index=False)
-                    self.vote_frequency.to_csv(vote_frequency_path, index=False)
+                    self.votes_per_user.to_csv(dataframe_path, index=False, sep=';')
+                    self.vote_frequency.to_csv(vote_frequency_path, index=False, sep=';')
 
         self.total = self.votes_per_user.shape[0]
         self.woman_total = self.count_gender_filter('fem')

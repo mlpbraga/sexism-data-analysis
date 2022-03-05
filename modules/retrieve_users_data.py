@@ -30,13 +30,13 @@ class Users:
         if df is None:
             if remake:
                 users_df = retrieve_users_from_db(conn)
-                users_df.to_csv(dataframe_path, index=False)
+                users_df.to_csv(dataframe_path, index=False, sep=';')
             else:
                 try:
-                    users_df = pd.read_csv(dataframe_path)
+                    users_df = pd.read_csv(dataframe_path, sep=';')
                 except:
                     users_df = retrieve_users_from_db(conn)
-                    users_df.to_csv(dataframe_path, index=False)
+                    users_df.to_csv(dataframe_path, index=False, sep=';')
         self.users_df = users_df
         self.total = self.users_df.shape[0]
 
