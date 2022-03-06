@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+import spacy
+from spacy import displacy
+from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 DATAFRAME_PATH = './data/labeled-comments.csv'
@@ -23,7 +26,6 @@ def get_vocabulary(df):
     vocabulary = (dict(zip(word_list, count_list)))
     return vocabulary, frequecy_array, word_list
 
-
 def get_bigrams(df):
     count_vectorizer = CountVectorizer(
         lowercase=False, stop_words=[], ngram_range=(2, 2))
@@ -34,11 +36,9 @@ def get_bigrams(df):
     vocabulary = (dict(zip(word_list, count_list)))
     return vocabulary, frequecy_array, word_list
 
-
 def get_doc(df, chosen_words):
     return df['content'].apply(lambda y: ' '.join(
         [x for x in y.split() if x in chosen_words]))
-
 
 def get_bigram_doc(df, chosen_words):
     def select_only_relevant_bigrams(text):
@@ -46,7 +46,6 @@ def get_bigram_doc(df, chosen_words):
                            for b in zip(l.split(" ")[:-1], l.split(" ")[1:])]
         return ' '.join([' '.join(w) for w in bigrams_in_text if ' '.join(w) in chosen_words])
     return df['content'].apply(select_only_relevant_bigrams)
-
 
 def get_relevant_words(df):
     return list(df.sort_values(
@@ -83,6 +82,7 @@ class Comments:
         self.undefined_comments = labeled_comments[labeled_comments['avg'] == 0.5]
 
         self._set_vocabularies()
+        self._set_pos_tagging()
         self._set_word_frequencies()
         self._set_bigrams_frequencies()
         self._set_tf()
@@ -106,6 +106,21 @@ class Comments:
             self.not_sexist_comments)
         self.undefined_bigrams, self.undefined_frequency_array, self.undefined_word_list = get_bigrams(
             self.undefined_comments)
+
+    def _set_pos_tagging(self):
+        nlp = spacy.load('pt_core_news_md')
+        self.sexist_pos_taggin_array = []
+        for comment in self.sexist_comments['content']:
+            text = nlp(comment)
+            self.sexist_pos_taggin_array.append(' '.join([tag.pos_ for tag in text]))
+        self.not_sexist_pos_taggin_array = []
+        for comment in self.not_sexist_comments['content']:
+            text = nlp(comment)
+            self.not_sexist_pos_taggin_array.append(' '.join([tag.pos_ for tag in text]))
+        self.undefined_pos_taggin_array = []
+        for comment in self.undefined_comments['content']:
+            text = nlp(comment)
+            self.undefined_pos_taggin_array.append(' '.join([tag.pos_ for tag in text]))
 
     def _set_bigrams_frequencies(self):
         word_freq = {
@@ -265,7 +280,44 @@ class Comments:
             decode_error='replace',
             max_features=100,
         )
+        sexist_pos_vectorizer = TfidfVectorizer(
+            tokenizer=None,
+            lowercase=False,
+            preprocessor=None,
+            ngram_range=(1, 2),
+            stop_words=None,
+            use_idf=False,
+            smooth_idf=False,
+            norm=None,
+            decode_error='replace',
+            max_features=5000,
+            min_df=5,
+            max_df=0.75,
+        )
+        not_sexist_pos_vectorizer = TfidfVectorizer(
+            tokenizer=None,
+            lowercase=False,
+            preprocessor=None,
+            ngram_range=(1, 2),
+            stop_words=None,
+            use_idf=False,
+            smooth_idf=False,
+            norm=None,
+            decode_error='replace',
+            max_features=5000,
+            min_df=5,
+            max_df=0.75,
+        )
 
+
+        sexist_pos =  pd.DataFrame(sexist_pos_vectorizer.fit_transform(pd.Series(self.sexist_pos_taggin_array)).toarray())
+        self.sexist_pos_vocab = {v:i for i, v in enumerate(sexist_pos_vectorizer.get_feature_names())}
+
+        not_sexist_pos =  pd.DataFrame(not_sexist_pos_vectorizer.fit_transform(pd.Series(self.not_sexist_pos_taggin_array)).toarray())
+        self.not_sexist_pos_vocab = {v:i for i, v in enumerate(not_sexist_pos_vectorizer.get_feature_names())}
+    
+        self.pos_tagging_tf = pd.concat([sexist_pos, not_sexist_pos]).fillna(0)
+    
         relevant_sexist_words = get_relevant_words(self.sexist_words)
         relevant_not_sexist_words = get_relevant_words(
             self.not_sexist_words)
@@ -336,11 +388,12 @@ class Comments:
         not_sexist_y = self.not_sexist_comments['avg'].apply(lambda x: 0)
         y_df = np.array(pd.concat([sexist_y, not_sexist_y]))
 
-        tf_dataframe = pd.concat(
-            [self.tf_sexist_dataframe,
-                self.tf_not_sexist_dataframe,
-                self.tf_sexist_bigrams_dataframe,
-                self.tf_not_sexist_bigrams_dataframe], axis=1)
+        tf_dataframe = pd.concat([
+            self.tf_sexist_dataframe,
+            self.tf_not_sexist_dataframe,
+            self.tf_sexist_bigrams_dataframe,
+            self.tf_not_sexist_bigrams_dataframe,
+            self.pos_tagging_tf], axis=1)
         dataframe = tf_dataframe
         dataframe['likes'] = likes_df
         dataframe['dislikes'] = dislikes_df
