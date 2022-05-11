@@ -15,6 +15,7 @@ conn = database.get_connection()
 print('-> Database setup is done!')
 
 today = datetime.now().strftime("%d-%m-%Y")
+
 print('-> Generating labeled_comments dataframe...')
 comments = Comments(conn, remake=True, dataframe_path=f'./data/{today}_labeled_comments.csv')
 print('-> Done!')

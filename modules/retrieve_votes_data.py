@@ -144,16 +144,22 @@ class Votes:
             formatted_codes = formatted_codes + [[key,i,coders[key][i]] for i in range(len(coders[key]))]
       
         ratingtask = agreement.AnnotationTask(data=formatted_codes)
-
+        if vote_qty > 1:
+            kappa = ratingtask.multi_kappa()
+        else:
+            kappa = None
         self.agreement[vote_qty] = {
             'vote_qty': vote_qty,
             'comment_qty': len(self.count_votes[vote_qty]),
-            'kappa': ratingtask.multi_kappa(),
+            'kappa': kappa,
         }
 
     def count_gender_filter(self, gender):
         count_users = self.votes_per_user.groupby(['gender'])['vote_id'].count()
-        return count_users[gender]
+        try:
+            return count_users[gender]
+        except:
+            return 0
 
     def latex_variables(self):
         print(latex_command_format('totalvotes',self.total))
