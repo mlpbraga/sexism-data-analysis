@@ -119,14 +119,19 @@ class Votes:
         for key in keys:
             comment_vote[key] = []
 
+
         self.count_votes[vote_qty] = list(
             vote_count['user_id'][vote_count['user_id']['count'] == vote_qty].index)
+      
+        if self.count_votes[vote_qty] == []:
+            self.count_votes[vote_qty] = list(vote_count['user_id'].index)
 
         for comment in self.count_votes[vote_qty]:
             df = self.votes_per_user[(self.votes_per_user['comment_id']== comment)]
             keys = list(comment_vote.keys())
 
             for i in range(0, len(keys)):
+                import pdb; pdb.set_trace()
                 if keys[i] == 'comment_id':
                     comment_vote['comment_id'].append(comment)
                 else:
@@ -144,6 +149,7 @@ class Votes:
             formatted_codes = formatted_codes + [[key,i,coders[key][i]] for i in range(len(coders[key]))]
       
         ratingtask = agreement.AnnotationTask(data=formatted_codes)
+        
         if vote_qty > 1:
             kappa = ratingtask.multi_kappa()
         else:
