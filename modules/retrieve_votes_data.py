@@ -77,6 +77,7 @@ class Votes:
         dataframe_path=DATAFRAME_PATH,
         votes_per_user_df=None,
         vote_frequency_df=None,
+        calc_agreement=True,
     ):
         self.votes_per_user = votes_per_user_df
         self.vote_frequency = vote_frequency_df
@@ -107,8 +108,9 @@ class Votes:
         self.count_votes = {}
         self.agreement = {}
 
-        for i in self.vote_frequency['votes'].values:
-            self._agreement(i);
+        if calc_agreement:
+            for i in self.vote_frequency['votes'].values:
+                self._agreement(i);
 
     def _agreement(self, vote_qty):
         vote_count = self.votes_per_user.groupby(['comment_id']).agg(['count'])
@@ -131,7 +133,6 @@ class Votes:
             keys = list(comment_vote.keys())
 
             for i in range(0, len(keys)):
-                import pdb; pdb.set_trace()
                 if keys[i] == 'comment_id':
                     comment_vote['comment_id'].append(comment)
                 else:
